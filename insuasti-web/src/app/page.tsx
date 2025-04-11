@@ -1,5 +1,5 @@
+import { Hero } from '@/ui/Hero';
 import { About } from './(homepage)/about';
-import { Hero } from './(homepage)/hero';
 
 export default function Home() {
   return (
