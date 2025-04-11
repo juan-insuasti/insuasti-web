@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Hero } from '@/ui/Hero';
+import { Default as DefaultSocial } from './Social.stories';
 
 export default {
   component: Hero,
@@ -10,12 +11,15 @@ export default {
 export type Story = StoryObj<typeof Hero>;
 
 export const Default: Story = {
-  args: {},
-  decorators: [
-    (Story) => (
-      <div className="flex min-h-screen flex-col items-start justify-center px-4 md:px-8 lg:px-16">
-        <Story />
-      </div>
+  args: {
+    title: (
+      <>
+        Hi, I&apos;m <span className="text-green-700">Juan Insuasti</span>!
+      </>
     ),
-  ],
+    description: 'A Frontend Developer turning design concepts into seamless digital experiences.',
+    social: {
+      socialLinks: DefaultSocial.args?.socialLinks,
+    },
+  },
 };

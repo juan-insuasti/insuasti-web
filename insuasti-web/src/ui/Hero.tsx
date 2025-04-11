@@ -1,29 +1,26 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import React from 'react';
 import { SectionFullPage } from '@/ui/SectionFullPage';
 import { Typography } from '@/ui/Typography';
 
 import '@/app/globals.css';
+import { Social, SocialProps } from './Social';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  title: React.ReactNode;
+  description: React.ReactNode;
+  social?: SocialProps;
+}
+
+export const Hero = ({ title, description, social }: HeroProps) => {
   return (
     <SectionFullPage>
       <Typography as="h1" variant="h1">
-        Hi, I&apos;m <span className="text-green-700">Juan Insuasti</span>!
+        {title}
       </Typography>
-
       <Typography as="p" variant="h2" className="mt-1 font-normal md:mt-2 lg:mt-4">
-        A Frontend Developer turning design concepts into seamless digital experiences.
+        {description}
       </Typography>
-      <div className="mt-4 flex">
-        <Link href="https://www.linkedin.com/in/jinsuasti/" target="_blank">
-          <Image src="/social-linkedin.svg" alt="Linkedin Profile" width={40} height={40} />
-        </Link>
-        <Link href="https://github.com/locke189" target="_blank">
-          <Image src="/social-github.svg" alt="Github Repositories" width={40} height={40} />
-        </Link>
-      </div>
+      {social && <Social {...social} />}
     </SectionFullPage>
   );
 };
