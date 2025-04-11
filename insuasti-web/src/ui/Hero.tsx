@@ -4,6 +4,8 @@ import React from 'react';
 import { SectionFullPage } from '@/ui/SectionFullPage';
 import { Typography } from '@/ui/Typography';
 
+import '@/app/globals.css';
+
 export const Hero: React.FC = () => {
   return (
     <SectionFullPage>
