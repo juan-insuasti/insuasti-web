@@ -1,27 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Social } from '@/ui/Social';
+import { SocialLinks } from '@/ui/SocialLinks';
+import { SOCIAL_LINKS } from '@/lib/consts';
 
 export default {
-  component: Social,
-  title: 'Social',
-  tags: ['autodocs'],
-} satisfies Meta<typeof Social>;
+	component: SocialLinks,
+	title: 'Social',
+	tags: ['autodocs'],
+} satisfies Meta<typeof SocialLinks>;
 
-export type Story = StoryObj<typeof Social>;
+export type Story = StoryObj<typeof SocialLinks>;
 
 export const Default: Story = {
-  args: {
-    socialLinks: [
-      {
-        href: 'https://www.linkedin.com/in/jinsuasti/',
-        src: '/social-linkedin.svg',
-        alt: 'Linkedin Profile',
-      },
-      {
-        href: 'https://github.com/locke189',
-        src: '/social-github.svg',
-        alt: 'Github Repositories',
-      },
-    ],
-  },
+	args: {
+		socialLinks: SOCIAL_LINKS,
+	},
 };

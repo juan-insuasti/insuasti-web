@@ -3,15 +3,14 @@ import { SectionFullPage } from '@/ui/SectionFullPage';
 import { Typography } from '@/ui/Typography';
 
 import '@/app/globals.css';
-import { Social, SocialProps } from './Social';
 
 interface HeroProps {
 	title: React.ReactNode;
 	description: React.ReactNode;
-	social?: SocialProps;
+	children?: React.ReactNode;
 }
 
-export const Hero = ({ title, description, social }: HeroProps) => {
+export const Hero = ({ title, description, children }: HeroProps) => {
 	return (
 		<SectionFullPage>
 			<Typography as="h1" variant="h1">
@@ -20,7 +19,7 @@ export const Hero = ({ title, description, social }: HeroProps) => {
 			<Typography as="p" variant="h2" className="mt-1 font-normal md:mt-2 lg:mt-4">
 				{description}
 			</Typography>
-			{social && <Social {...social} />}
+			{children}
 		</SectionFullPage>
 	);
 };
