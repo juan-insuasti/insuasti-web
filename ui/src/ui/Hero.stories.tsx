@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Hero } from '@/ui/Hero';
-import { Default as DefaultSocial } from './Social.stories';
 
 export default {
   component: Hero,
@@ -18,8 +17,5 @@ export const Default: Story = {
       </>
     ),
     description: 'A Frontend Developer turning design concepts into seamless digital experiences.',
-    social: {
-      socialLinks: DefaultSocial.args?.socialLinks,
-    },
   },
 };
