@@ -13,7 +13,7 @@ export interface SocialProps {
   socialLinks?: SocialLink[];
 }
 
-export const Social = ({ className, socialLinks = [] }: SocialProps) => {
+export const SocialLinks = ({ className, socialLinks = [] }: SocialProps) => {
   return (
     <div className={clsx('mt-4 flex', className)}>
       {socialLinks.map((link, index) => (

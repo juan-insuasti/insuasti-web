@@ -1,5 +1,7 @@
 import { Hero } from '@/ui/Hero';
 import { About } from './(homepage)/about';
+import { SOCIAL_LINKS } from '@/lib/consts';
+import { SocialLinks } from '@/ui/SocialLinks';
 
 export default function Home() {
   const HeroTitle = (
@@ -13,7 +15,9 @@ export default function Home() {
   return (
     <div className="mb-28 flex justify-center md:mb-0">
       <div className="container">
-        <Hero title={HeroTitle} description={HeroDescription} />
+        <Hero title={HeroTitle} description={HeroDescription}>
+          <SocialLinks socialLinks={SOCIAL_LINKS} />
+        </Hero>
         <About />
       </div>
     </div>
