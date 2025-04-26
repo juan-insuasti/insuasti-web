@@ -2,13 +2,12 @@ import { Hero } from '@/ui/Hero';
 import { About } from './(homepage)/about';
 import { SOCIAL_LINKS } from '@/lib/consts';
 import { SocialLinks } from '@/ui/SocialLinks';
-import { N } from 'vitest/dist/chunks/reporters.d.CfRkRKN2.js';
-import { NavBar } from '@/ui/NavBar';
+import { NavBar } from '@/ui/navbar/NavBar';
 
 export default function Home() {
   const HeroTitle = (
     <>
-      Hi, I&apos;m <span className="text-green-700">Juan Insuasti</span>!
+      Hi, I&apos;m <span className="text-primary">Juan Insuasti</span>!
     </>
   );
   const HeroDescription =
