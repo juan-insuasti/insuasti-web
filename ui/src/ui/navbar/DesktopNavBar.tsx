@@ -3,11 +3,11 @@ import { JSX } from 'react';
 import type { NavItem } from './NavBar';
 import { ThemeMenu } from '../ThemeMenu';
 
-type MobileNavBarProps = {
+type DesktopNavBarProps = {
   navItems: Array<NavItem>;
 };
 
-export function DesktopNavBar({ navItems }: MobileNavBarProps): JSX.Element {
+export function DesktopNavBar({ navItems }: DesktopNavBarProps): JSX.Element {
   return (
     <nav className="container mx-auto hidden items-center justify-between px-4 py-2 sm:flex">
       <Link href="/" className="flex items-center p-4">
