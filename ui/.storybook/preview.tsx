@@ -3,6 +3,7 @@ import type { Preview } from '@storybook/react';
 
 import { Fira_Code } from 'next/font/google';
 import '@/app/globals.css';
+import './storybook.css';
 
 const fira = Fira_Code({
   weight: '400',
