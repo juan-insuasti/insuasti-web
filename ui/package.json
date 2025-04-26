@@ -12,6 +12,7 @@
     "chromatic": "npx chromatic --project-token=chpt_c5cb6b0111743bc"
   },
   "dependencies": {
+    "@radix-ui/react-navigation-menu": "^1.2.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.503.0",
