@@ -58,15 +58,15 @@
     --tw-shadow-color: 0 0 #d1c3c300;
   }
   .p {
-    @apply text-left font-inter text-lg lg:text-xl;
+    @apply text-left font-inter text-lg font-normal lg:text-xl;
   }
 
   .h1 {
-    @apply text-left font-bebas text-4xl font-bold md:text-5xl lg:text-6xl;
+    @apply text-left font-bebas text-4xl font-normal md:text-5xl lg:text-6xl;
   }
 
   .h2 {
-    @apply text-left font-bebas text-3xl font-bold md:text-4xl lg:text-5xl;
+    @apply text-left font-bebas text-3xl font-normal md:text-4xl lg:text-5xl;
   }
 
   .h3 {
@@ -78,7 +78,7 @@
   }
 
   .small {
-    @apply font-inter text-xs text-gray-500;
+    @apply font-inter text-xs font-normal text-gray-500;
   }
 }
 
