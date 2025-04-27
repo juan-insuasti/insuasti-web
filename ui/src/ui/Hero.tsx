@@ -17,10 +17,10 @@ export const Hero = ({ title, description, children }: HeroProps) => {
         <div className="absolute ml-[-3em] aspect-square h-full animate-spin rounded-full bg-gradient-to-tr from-primary to-background opacity-20 blur-xl dark:to-secondary" />
         <div className="absolute aspect-square h-full animate-spin rounded-full bg-gradient-to-bl from-background to-primary opacity-20 blur-3xl dark:from-secondary" />
       </div>
-      <Typography as="h1" variant="h1">
+      <Typography as="h1" variant="h1" className="text-5xl md:text-8xl lg:text-9xl">
         {title}
       </Typography>
-      <Typography as="p" variant="h2" className="mt-1 font-normal md:mt-2 lg:mt-4">
+      <Typography as="p" variant="h2" className="font-inter mt-1 font-normal md:mt-2 lg:mt-4">
         {description}
       </Typography>
       {children}

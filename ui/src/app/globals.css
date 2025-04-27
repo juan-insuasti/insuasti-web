@@ -2,30 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-  @apply text-left text-xs md:text-sm lg:text-base;
-}
-
-h1 {
-  @apply text-left text-3xl font-bold md:text-4xl lg:text-5xl;
-}
-
-h2 {
-  @apply text-left text-2xl font-bold md:text-3xl lg:text-4xl;
-}
-
-h3 {
-  @apply text-left text-xl font-bold md:text-2xl lg:text-3xl;
-}
-
-h4 {
-  @apply text-left text-lg font-bold md:text-xl lg:text-2xl;
-}
-
-small {
-  @apply text-xs text-gray-500;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -81,6 +57,29 @@ small {
     --chart-5: 340 75% 55%;
     --tw-shadow-color: 0 0 #d1c3c300;
   }
+  .p {
+    @apply font-inter text-left text-xs md:text-sm lg:text-base;
+  }
+
+  .h1 {
+    @apply font-bebas text-left text-3xl font-bold md:text-4xl lg:text-5xl;
+  }
+
+  .h2 {
+    @apply font-bebas text-left text-2xl font-bold md:text-3xl lg:text-4xl;
+  }
+
+  .h3 {
+    @apply font-inter text-left text-xl font-bold md:text-2xl lg:text-3xl;
+  }
+
+  .h4 {
+    @apply font-inter text-left text-lg font-bold md:text-xl lg:text-2xl;
+  }
+
+  .small {
+    @apply font-inter text-xs text-gray-500;
+  }
 }
 
 @layer base {
@@ -95,5 +94,23 @@ small {
   }
   html {
     @apply scroll-smooth;
+  }
+  h1 {
+    @apply h1;
+  }
+  h2 {
+    @apply h2;
+  }
+  h3 {
+    @apply h3;
+  }
+  h4 {
+    @apply h4;
+  }
+  p {
+    @apply p;
+  }
+  small {
+    @apply small;
   }
 }

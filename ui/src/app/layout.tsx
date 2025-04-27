@@ -1,12 +1,8 @@
 import type { Metadata } from 'next';
-import { Fira_Code } from 'next/font/google';
+
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-
-const fira = Fira_Code({
-  weight: '400',
-  subsets: ['latin'],
-});
+import { bebas, fira, inter, poppins } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   title: 'Homepage | Insuasti.com',
@@ -20,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fira.className} antialiased`}>
+      <body
+        className={`${inter.variable} ${fira.variable} ${poppins.variable} ${bebas.variable} antialiased`}
+      >
         {' '}
         <ThemeProvider
           attribute="class"

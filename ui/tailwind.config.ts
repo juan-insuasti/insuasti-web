@@ -57,6 +57,12 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      fontFamily: {
+        inter: ['var(--font-inter)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        fira: ['var(--font-fira)', 'monospace'],
+        bebas: ['var(--font-bebas)', 'sans-serif'],
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
