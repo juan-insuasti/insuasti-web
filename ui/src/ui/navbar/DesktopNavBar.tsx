@@ -23,7 +23,9 @@ export function DesktopNavBar({ navItems }: DesktopNavBarProps): JSX.Element {
         {navItems.map((item) => (
           <li key={item.title} className="flex items-center">
             <Link href={item.href} className="hover:text-primary">
-              {item.title}
+              <Typography variant={'p'} as="p">
+                {item.title}
+              </Typography>
             </Link>
           </li>
         ))}

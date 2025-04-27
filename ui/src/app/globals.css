@@ -58,23 +58,23 @@
     --tw-shadow-color: 0 0 #d1c3c300;
   }
   .p {
-    @apply font-inter text-left text-xs md:text-sm lg:text-base;
+    @apply text-left font-inter text-lg lg:text-xl;
   }
 
   .h1 {
-    @apply font-bebas text-left text-3xl font-bold md:text-4xl lg:text-5xl;
+    @apply text-left font-bebas text-4xl font-bold md:text-5xl lg:text-6xl;
   }
 
   .h2 {
-    @apply font-bebas text-left text-2xl font-bold md:text-3xl lg:text-4xl;
+    @apply text-left font-bebas text-3xl font-bold md:text-4xl lg:text-5xl;
   }
 
   .h3 {
-    @apply font-inter text-left text-xl font-bold md:text-2xl lg:text-3xl;
+    @apply text-left font-inter text-2xl font-bold md:text-3xl lg:text-4xl;
   }
 
   .h4 {
-    @apply font-inter text-left text-lg font-bold md:text-xl lg:text-2xl;
+    @apply text-left font-inter text-xl font-bold md:text-2xl lg:text-3xl;
   }
 
   .small {

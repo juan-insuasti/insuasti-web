@@ -28,7 +28,7 @@ export const About: React.FC = () => {
           </Typography>
           <div className="mt-6 grid w-full grid-cols-1 gap-4 md:grid-cols-2">
             <div>
-              <Typography as="h3" variant="h4">
+              <Typography as="h3" variant="h3">
                 Skills & Tech
               </Typography>
               <ul className="mt-1 md:mt-2 lg:mt-4">
@@ -39,7 +39,7 @@ export const About: React.FC = () => {
               </ul>
             </div>
             <div>
-              <Typography as="h3" variant="h4">
+              <Typography as="h3" variant="h3">
                 Soft Skills
               </Typography>
               <ul className="mt-1 md:mt-2 lg:mt-4">
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
               </ul>
             </div>
           </div>
-          <Typography as="h3" variant="h4" className="mt-6">
+          <Typography as="h3" variant="h3" className="mt-6">
             Current Focus
           </Typography>
           <Typography as="p" variant="p">
