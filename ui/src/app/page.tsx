@@ -7,7 +7,7 @@ import { NavBar } from '@/ui/navbar/NavBar';
 export default function Home() {
   const HeroTitle = (
     <>
-      Hi, I&apos;m <span className="text-primary">Juan Insuasti</span>!
+      Hi, I&apos;m <span className="text-primary">Juan&nbsp;Insuasti</span>
     </>
   );
   const HeroDescription =
