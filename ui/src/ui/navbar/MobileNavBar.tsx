@@ -8,6 +8,7 @@ import { ThemeMenu } from '../ThemeMenu';
 
 import type { NavItem } from './NavBar';
 import Link from 'next/link';
+import { Typography } from '../Typography';
 
 type MobileNavBarProps = {
   navItems: Array<NavItem>;
@@ -19,7 +20,9 @@ export function MobileNavBar({ navItems }: MobileNavBarProps): JSX.Element {
   return (
     <nav className="container mx-auto flex items-center justify-between px-4 py-2 sm:hidden">
       <Link href="/" className="flex items-center p-4">
-        <span className="text-2xl font-bold text-primary">Insuasti</span>
+        <Typography as="span" className="text-3xl font-bold text-primary" variant={'h2'}>
+          Insuasti
+        </Typography>
       </Link>
       <div className="flex items-center space-x-4">
         <ThemeMenu />
