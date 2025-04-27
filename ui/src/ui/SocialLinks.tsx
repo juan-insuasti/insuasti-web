@@ -15,10 +15,15 @@ export interface SocialProps {
 
 export const SocialLinks = ({ className, socialLinks = [] }: SocialProps) => {
   return (
-    <div className={clsx('mt-4 flex', className)}>
+    <div className={clsx('mt-4 flex gap-4', className)}>
       {socialLinks.map((link, index) => (
-        <Link key={index} href={link.href} target="_blank" className="mr-4">
-          <Image src={link.src} alt={link.alt} width={40} height={40} />
+        <Link
+          key={index}
+          href={link.href}
+          target="_blank"
+          className="relative aspect-square h-14 md:h-16"
+        >
+          <Image src={link.src} alt={link.alt} fill />
         </Link>
       ))}
     </div>

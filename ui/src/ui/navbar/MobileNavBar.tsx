@@ -38,7 +38,9 @@ export function MobileNavBar({ navItems }: MobileNavBarProps): JSX.Element {
               {navItems.map((item) => (
                 <li key={item.title} className="flex items-center" onClick={() => setOpen(false)}>
                   <Link href={item.href} className="hover:text-primary">
-                    {item.title}
+                    <Typography variant={'h3'} as="p" className="font-normal">
+                      {item.title}
+                    </Typography>
                   </Link>
                 </li>
               ))}
