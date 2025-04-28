@@ -1,7 +1,6 @@
 import { Fira_Code } from 'next/font/google';
-import { Poppins } from 'next/font/google';
-import { Bebas_Neue } from 'next/font/google';
 import { Inter } from 'next/font/google';
+import { Fjalla_One } from 'next/font/google';
 
 export const fira = Fira_Code({
   weight: '400',
@@ -9,16 +8,10 @@ export const fira = Fira_Code({
   variable: '--font-fira',
 });
 
-export const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
+export const fjallaOne = Fjalla_One({
+  weight: ['400'],
   subsets: ['latin'],
   variable: '--font-poppins',
-});
-
-export const bebas = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-bebas',
 });
 
 export const inter = Inter({
