@@ -17,7 +17,7 @@ export const Hero = ({ title, description, children }: HeroProps) => {
         <div className="absolute ml-[-3em] aspect-square h-full animate-spin rounded-full bg-gradient-to-tr from-primary to-background opacity-20 blur-xl dark:to-secondary" />
         <div className="absolute aspect-square h-full animate-spin rounded-full bg-gradient-to-bl from-background to-primary opacity-20 blur-3xl dark:from-secondary" />
       </div>
-      <Typography as="h1" variant="h1" className="text-6xl md:text-8xl lg:text-9xl">
+      <Typography as="h1" variant="h1" className="text-5xl leading-tight md:text-7xl lg:text-8xl">
         {title}
       </Typography>
       <Typography as="p" variant="h3" className="mt-1 font-inter font-normal md:mt-2 lg:mt-4">
