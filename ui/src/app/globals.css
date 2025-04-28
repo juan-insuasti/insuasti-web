@@ -62,11 +62,11 @@
   }
 
   .h1 {
-    @apply text-left font-bebas text-4xl font-normal md:text-5xl lg:text-6xl;
+    @apply text-left font-poppins text-4xl/9 font-bold uppercase md:text-5xl lg:text-6xl;
   }
 
   .h2 {
-    @apply text-left font-bebas text-3xl font-normal md:text-4xl lg:text-5xl;
+    @apply text-left font-poppins text-3xl font-bold uppercase md:text-4xl lg:text-5xl;
   }
 
   .h3 {

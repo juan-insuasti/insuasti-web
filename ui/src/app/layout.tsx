@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import { bebas, fira, inter, poppins } from '@/lib/fonts';
+import { fira, inter, fjallaOne } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   title: 'Homepage | Insuasti.com',
@@ -16,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${fira.variable} ${poppins.variable} ${bebas.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${fira.variable} ${fjallaOne.variable} antialiased`}>
         {' '}
         <ThemeProvider
           attribute="class"
