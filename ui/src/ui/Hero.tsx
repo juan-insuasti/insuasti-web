@@ -13,9 +13,9 @@ interface HeroProps {
 export const Hero = ({ title, description, children }: HeroProps) => {
   return (
     <SectionFullPage className="relative">
-      <div className="absolute inset-0 -z-10 inline-flex h-full w-full animate-pulse items-center justify-center overflow-hidden blur-3xl filter">
-        <div className="absolute ml-[-3em] aspect-square h-full animate-spin rounded-full bg-gradient-to-tr from-primary to-background opacity-20 blur-xl dark:to-secondary" />
-        <div className="absolute aspect-square h-full animate-spin rounded-full bg-gradient-to-bl from-background to-primary opacity-20 blur-3xl dark:from-secondary" />
+      <div className="duration-2000 absolute inset-0 -z-10 inline-flex h-full w-full animate-pulse items-center justify-center overflow-hidden blur-3xl filter">
+        <div className="duration-3000 absolute ml-[-3em] aspect-square h-full animate-spin rounded-full bg-gradient-to-tr from-primary to-background opacity-20 blur-xl dark:to-secondary dark:opacity-35" />
+        <div className="duration-3000 absolute aspect-square h-full animate-spin rounded-full bg-gradient-to-bl from-background to-primary opacity-20 blur-3xl dark:from-secondary dark:opacity-35" />
       </div>
       <Typography as="h1" variant="h1" className="text-5xl leading-tight md:text-7xl lg:text-8xl">
         {title}
