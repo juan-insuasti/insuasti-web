@@ -6,7 +6,7 @@ import React from 'react';
 export const About: React.FC = () => {
   return (
     <SectionFullPage>
-      <Typography as="h2" variant="h1" className="text-green-700">
+      <Typography as="h2" variant="h1" className="text-primary">
         About Me
       </Typography>
 

@@ -63,6 +63,10 @@ export default {
         fira: ['var(--font-fira)', 'monospace'],
         bebas: ['var(--font-bebas)', 'sans-serif'],
       },
+      transitionDuration: {
+        '2000': '2000ms',
+        '3000': '3000ms',
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
