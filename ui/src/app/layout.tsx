@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { fira, inter, fjallaOne } from '@/lib/fonts';
+import { GlobalFooter } from '@/ui/GlobalFooter';
 
 export const metadata: Metadata = {
   title: 'Homepage | Insuasti.com',
@@ -24,7 +25,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          {children}
+          <>
+            {children}
+            <GlobalFooter />
+          </>
         </ThemeProvider>
       </body>
     </html>
