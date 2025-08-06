@@ -8,6 +8,7 @@ import { SquareMenu } from 'lucide-react';
 import type { NavItem } from './NavBar';
 import Link from 'next/link';
 import { Typography } from '../Typography';
+import { ThemeMenu } from '../ThemeMenu';
 
 type MobileNavBarProps = {
   navItems: Array<NavItem>;
@@ -37,6 +38,7 @@ export function MobileNavBar({ navItems }: MobileNavBarProps): JSX.Element {
               </li>
             ))}
           </ul>
+          <ThemeMenu />
         </SheetContent>
       </Sheet>
     </div>

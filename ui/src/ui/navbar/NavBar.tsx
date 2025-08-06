@@ -14,23 +14,29 @@ export type NavItem = {
 const NavItems: Array<NavItem> = [
   {
     title: 'About Me',
-    href: '#about',
+    href: '/#about',
+  },
+  {
+    title: 'Blog',
+    href: '/blog',
   },
 ];
 
 export function NavBar(): JSX.Element {
   return (
-    <header className="fixed inset-0 z-50 mx-auto h-14 w-full bg-background shadow-md dark:shadow-md dark:shadow-foreground">
+    <header className="fixed inset-0 z-50 mx-auto h-14 w-full bg-background shadow-md  opacity-90">
       <nav className="container mx-auto flex h-full items-center justify-between px-4">
         <Link href="/" className="flex h-full items-center">
-          <Typography as="span" className="text-3xl text-primary" variant={'h2'}>
+          <Typography as="span" className="sm:text-4xl text-primary" variant={'h2'}>
             Insuasti
           </Typography>
         </Link>
         <div className="flex items-center gap-4">
-          <ThemeMenu />
           <DesktopNavBar navItems={NavItems} />
           <MobileNavBar navItems={NavItems} />
+          <div className="ml-4 hidden sm:block">
+            <ThemeMenu />
+          </div>
         </div>
       </nav>
     </header>

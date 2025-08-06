@@ -25,5 +25,5 @@ export const Typography: FC<TTypographyProps> = ({
     small: 'small',
   };
 
-  return <Tag className={clsx(baseStyles[variant], className)}>{children}</Tag>;
+  return <Tag className={clsx(className, baseStyles[variant])}>{children}</Tag>;
 };
