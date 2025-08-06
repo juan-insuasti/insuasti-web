@@ -9,9 +9,9 @@ type DesktopNavBarProps = {
 
 export function DesktopNavBar({ navItems }: DesktopNavBarProps): JSX.Element {
   return (
-    <ul className="hidden align-middle sm:flex">
+    <ul className="hidden align-middle sm:flex gap-8">
       {navItems.map((item) => (
-        <li key={item.title} className="flex items-center">
+        <li key={item.title} className="flex items-center ">
           <Link href={item.href} className="hover:text-primary">
             <Typography variant={'p'} as="p">
               {item.title}
