@@ -6,6 +6,7 @@ export interface BlogPost {
   excerpt: string;
   tags: string[];
   content: string;
+  publish?: string; // Optional publish date, if not set or future date, post is hidden
 }
 
 export interface BlogPostMeta {
@@ -15,6 +16,7 @@ export interface BlogPostMeta {
   author: string;
   excerpt: string;
   tags: string[];
+  publish?: string; // Optional publish date, if not set or future date, post is hidden
 }
 
 export interface PaginatedBlogPosts {

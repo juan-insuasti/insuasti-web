@@ -1,9 +1,10 @@
 ---
-title: "Hello World: Starting My Blog Journey"
-date: "2025-01-15"
-author: "Juan Insuasti"
-excerpt: "Welcome to my blog! This is the first post where I share my thoughts on frontend development and web technologies."
-tags: ["ai-generated", "introduction", "frontend", "blog"]
+title: 'Hello World: Starting My Blog Journey'
+date: '2025-01-15'
+author: 'Juan Insuasti'
+excerpt: 'Welcome to my blog! This is the first post where I share my thoughts on frontend development and web technologies.'
+tags: ['ai-generated', 'introduction', 'frontend', 'blog']
+publish: '2025-01-15'
 ---
 
 > This content was AI-generated for demonstration purposes, and may not reflect the author's true thoughts or opinions.
@@ -24,7 +25,7 @@ In this blog, I'll be covering:
 ```javascript
 // Here's a simple hello world in JavaScript
 function helloWorld() {
-  console.log("Hello, World!");
+  console.log('Hello, World!');
 }
 
 helloWorld();

@@ -4,6 +4,7 @@ date: '2025-01-25'
 author: 'Juan Insuasti'
 excerpt: 'A demonstration of GitHub-style callouts in markdown using remark-blockquote-alerts plugin.'
 tags: ['markdown', 'callouts', 'demo', 'github']
+publish: '2025-01-25'
 ---
 
 This post demonstrates the different types of callouts available in our markdown processing pipeline using the `remark-blockquote-alerts` plugin.

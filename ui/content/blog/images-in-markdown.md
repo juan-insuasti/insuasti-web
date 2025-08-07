@@ -4,6 +4,7 @@ date: '2025-01-20'
 author: 'Juan Insuasti'
 excerpt: 'A demonstration of how images work in markdown blog posts with various examples and styles.'
 tags: ['ai-generated', 'markdown', 'images', 'blog', 'examples']
+publish: '2025-12-25' # Scheduled for future - won't be visible until this date
 ---
 
 # Working with Images in Markdown

@@ -1,9 +1,10 @@
 ---
-title: "Building Performant React Applications"
-date: "2025-01-10"
-author: "Juan Insuasti"
-excerpt: "Learn essential techniques for optimizing React applications, from code splitting to memory management."
-tags: ["ai-generated", "react", "performance", "optimization", "frontend"]
+title: 'Building Performant React Applications'
+date: '2025-01-10'
+author: 'Juan Insuasti'
+excerpt: 'Learn essential techniques for optimizing React applications, from code splitting to memory management.'
+tags: ['ai-generated', 'react', 'performance', 'optimization', 'frontend']
+publish: '2025-01-10'
 ---
 
 > This content was AI-generated for demonstration purposes, and may not reflect the author's true thoughts or opinions.
@@ -50,14 +51,17 @@ function Component({ items, onItemClick }) {
     return items.reduce((acc, item) => acc + item.value, 0);
   }, [items]);
 
-  const handleClick = useCallback((id) => {
-    onItemClick(id);
-  }, [onItemClick]);
+  const handleClick = useCallback(
+    (id) => {
+      onItemClick(id);
+    },
+    [onItemClick],
+  );
 
   return (
     <div>
       <p>Total: {expensiveValue}</p>
-      {items.map(item => (
+      {items.map((item) => (
         <button key={item.id} onClick={() => handleClick(item.id)}>
           {item.name}
         </button>
@@ -74,6 +78,7 @@ For large lists, consider implementing virtual scrolling to render only visible 
 ## Performance Monitoring
 
 Use tools like:
+
 - React DevTools Profiler
 - Chrome DevTools
 - Web Vitals
