@@ -4,7 +4,6 @@ date: '2025-01-10'
 author: 'Juan Insuasti'
 excerpt: 'Learn essential techniques for optimizing React applications, from code splitting to memory management.'
 tags: ['ai-generated', 'react', 'performance', 'optimization', 'frontend']
-publish: '2025-01-10'
 ---
 
 > This content was AI-generated for demonstration purposes, and may not reflect the author's true thoughts or opinions.

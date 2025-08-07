@@ -4,7 +4,6 @@ date: '2025-08-10'
 author: 'Juan Insuasti'
 excerpt: 'This is an example of a scheduled post that will be published on a future date.'
 tags: ['demo', 'scheduled', 'example']
-publish: '2025-12-01' # This post is scheduled for December 1st, 2025
 ---
 
 # Scheduled Post Example
