@@ -6,7 +6,6 @@ import remarkRehype from 'remark-rehype';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
-import rehypeImgSize from 'rehype-img-size';
 import rehypeFigure from 'rehype-figure';
 import rehypeStringify from 'rehype-stringify';
 
@@ -23,7 +22,6 @@ export async function renderMarkdown(content: string): Promise<string> {
         className: ['heading-link'],
       },
     })
-    .use(rehypeImgSize, { dir: 'public' })
     .use(rehypeFigure, {
       className: 'markdown-figure',
     })
