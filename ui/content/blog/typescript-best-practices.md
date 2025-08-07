@@ -1,9 +1,10 @@
 ---
-title: "TypeScript Best Practices for Large Applications"
-date: "2025-01-05"
-author: "Juan Insuasti"
-excerpt: "Discover advanced TypeScript patterns and practices that help maintain code quality in large-scale applications."
-tags: ["ai-generated", "typescript", "best-practices", "architecture", "frontend"]
+title: 'TypeScript Best Practices for Large Applications'
+date: '2025-01-05'
+author: 'Juan Insuasti'
+excerpt: 'Discover advanced TypeScript patterns and practices that help maintain code quality in large-scale applications.'
+tags: ['ai-generated', 'typescript', 'best-practices', 'architecture', 'frontend']
+# No publish field - this makes it a draft that won't be visible
 ---
 
 > This content was AI-generated for demonstration purposes, and may not reflect the author's true thoughts or opinions.
@@ -52,7 +53,7 @@ interface UserProfile {
 function createUser(data: Omit<User, 'id'>): User {
   return {
     id: generateId(),
-    ...data
+    ...data,
   };
 }
 ```
@@ -83,11 +84,8 @@ interface Identifiable {
   id: string;
 }
 
-function findById<T extends Identifiable>(
-  items: T[], 
-  id: string
-): T | undefined {
-  return items.find(item => item.id === id);
+function findById<T extends Identifiable>(items: T[], id: string): T | undefined {
+  return items.find((item) => item.id === id);
 }
 ```
 
@@ -116,7 +114,7 @@ getUser(postId); // ❌ Type error
 Use discriminated unions for handling different states:
 
 ```typescript
-type AsyncData<T> = 
+type AsyncData<T> =
   | { status: 'loading' }
   | { status: 'error'; error: string }
   | { status: 'success'; data: T };
