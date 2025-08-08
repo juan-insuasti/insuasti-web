@@ -43,6 +43,7 @@ export function getAllPosts(): BlogPostMeta[] {
           excerpt: data.excerpt || '',
           tags: data.tags || [],
           publish: data.publish, // Include the publish field
+          highlighted: data.highlighted || false, // Include the highlighted field
         } as BlogPostMeta;
       })
       .filter(shouldPublishPost) // Filter out unpublished posts
@@ -75,6 +76,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
         excerpt: data.excerpt || '',
         tags: data.tags || [],
         publish: data.publish, // Include the publish field
+        highlighted: data.highlighted || false, // Include the highlighted field
         content,
       } as BlogPost;
 
@@ -97,6 +99,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       excerpt: data.excerpt || '',
       tags: data.tags || [],
       publish: data.publish, // Include the publish field
+      highlighted: data.highlighted || false, // Include the highlighted field
       content,
     } as BlogPost;
 
@@ -189,4 +192,22 @@ export function getRelatedPosts(
     .map((item) => item.post);
 
   return relatedPosts;
+}
+
+export function getLatestPost(): BlogPostMeta | null {
+  const posts = getAllPosts();
+  return posts.length > 0 ? posts[0] : null;
+}
+
+export function getHighlightedPost(): BlogPostMeta | null {
+  const posts = getAllPosts();
+  const highlightedPosts = posts.filter(post => post.highlighted);
+  
+  if (highlightedPosts.length === 0) {
+    return null;
+  }
+  
+  // Return a random highlighted post
+  const randomIndex = Math.floor(Math.random() * highlightedPosts.length);
+  return highlightedPosts[randomIndex];
 }

@@ -1,7 +1,6 @@
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
-import remarkBlockquoteAlerts from 'remark-blockquote-alerts';
 import remarkRehype from 'remark-rehype';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -13,7 +12,6 @@ export async function renderMarkdown(content: string): Promise<string> {
   const result = await unified()
     .use(remarkParse)
     .use(remarkGfm)
-    .use(remarkBlockquoteAlerts)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
@@ -23,7 +21,7 @@ export async function renderMarkdown(content: string): Promise<string> {
       },
     })
     .use(rehypeFigure, {
-      className: 'markdown-figure',
+      className: 'markdown-figure'
     })
     .use(rehypeHighlight)
     .use(rehypeStringify, { allowDangerousHtml: true })

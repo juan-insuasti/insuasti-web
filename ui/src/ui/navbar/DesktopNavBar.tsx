@@ -13,7 +13,7 @@ export function DesktopNavBar({ navItems }: DesktopNavBarProps): JSX.Element {
       {navItems.map((item) => (
         <li key={item.title} className="flex items-center ">
           <Link href={item.href} className="hover:text-primary">
-            <Typography variant={'p'} as="p">
+            <Typography variant='h2' as="p" className="!text-2xl !font-semibold !text-foreground">
               {item.title}
             </Typography>
           </Link>

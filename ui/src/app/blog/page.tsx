@@ -74,7 +74,7 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
     <>
       <NavBar />
       <div className="min-h-screen pb-28 pt-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <header className="mb-12 mt-8 text-center">
             <Typography as="h1" variant="h1" className="mb-4">
               {BLOG_TITLE}

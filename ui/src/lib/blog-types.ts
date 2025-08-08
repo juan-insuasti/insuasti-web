@@ -7,6 +7,7 @@ export interface BlogPost {
   tags: string[];
   content: string;
   publish?: string; // Optional publish date, if not set or future date, post is hidden
+  highlighted?: boolean; // Optional highlighted flag for featured posts
 }
 
 export interface BlogPostMeta {
@@ -17,6 +18,7 @@ export interface BlogPostMeta {
   excerpt: string;
   tags: string[];
   publish?: string; // Optional publish date, if not set or future date, post is hidden
+  highlighted?: boolean; // Optional highlighted flag for featured posts
 }
 
 export interface PaginatedBlogPosts {

@@ -11,12 +11,12 @@ export const GlobalFooter = () => {
         <div className="wave-1 absolute bottom-0 h-[50px] w-full bg-primary opacity-60" />
         <div className="wave-2 absolute bottom-0 h-[30px] w-full bg-primary" />
       </div>
-      <div className="bg-primary">
-        <div className="container flex flex-col items-center justify-center gap-3 py-6">
-          <Typography as="p" variant={'p'} className="text-center text-sm text-background">
+      <div className="w-full bg-primary">
+        <div className="flex flex-col items-center justify-center gap-3 py-6">
+          <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
             © {new Date().getFullYear()} Juan Insuasti. All rights reserved.
           </Typography>
-          <Typography as="p" variant={'p'} className="text-center text-sm text-background">
+          <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
             Handcrafted with <span className="text-red-500">❤️</span> by Juan Insuasti
           </Typography>
         </div>

@@ -3,6 +3,7 @@ import { About } from './(homepage)/about';
 import { SOCIAL_LINKS } from '@/lib/consts';
 import { SocialLinks } from '@/ui/SocialLinks';
 import { NavBar } from '@/ui/navbar/NavBar';
+import { BlogShowcase } from '@/ui/BlogShowcase';
 
 export default function Home() {
   const HeroTitle = (
@@ -23,6 +24,7 @@ export default function Home() {
           </Hero>
           <a id="about" />
           <About />
+          <BlogShowcase />
         </div>
       </div>
     </>
