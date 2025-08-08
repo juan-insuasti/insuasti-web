@@ -6,7 +6,7 @@ import React from 'react';
 export const About: React.FC = () => {
   return (
     <SectionFullPage>
-      <Typography as="h2" variant="h1" className="text-primary">
+      <Typography as="h2" variant="h1" className="">
         About Me
       </Typography>
 
@@ -28,10 +28,10 @@ export const About: React.FC = () => {
           </Typography>
           <div className="mt-6 grid w-full grid-cols-1 gap-4 md:grid-cols-2">
             <div>
-              <Typography as="h3" variant="h3">
+              <Typography as="h3" variant="h3" className='text-primary'>
                 Skills & Tech
               </Typography>
-              <ul className="mt-1 md:mt-2 lg:mt-4">
+              <ul className="mt-1 md:mt-2 lg:mt-4 text-muted-foreground">
                 <li>React & TypeScript</li>
                 <li>Next.js / Remix</li>
                 <li>GraphQL & REST</li>
@@ -39,10 +39,10 @@ export const About: React.FC = () => {
               </ul>
             </div>
             <div>
-              <Typography as="h3" variant="h3">
+              <Typography as="h3" variant="h3" className='text-primary'>
                 Soft Skills
               </Typography>
-              <ul className="mt-1 md:mt-2 lg:mt-4">
+              <ul className="mt-1 md:mt-2 lg:mt-4 text-muted-foreground">
                 <li>Problem-Solving</li>
                 <li>Adaptability</li>
                 <li>Collaboration</li>
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
               </ul>
             </div>
           </div>
-          <Typography as="h3" variant="h3" className="mt-6">
+          <Typography as="h3" variant="h3" className="mt-6 text-primary mb-4">
             Current Focus
           </Typography>
           <Typography as="p" variant="p">

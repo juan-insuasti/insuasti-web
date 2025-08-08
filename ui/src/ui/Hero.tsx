@@ -20,7 +20,7 @@ export const Hero = ({ title, description, children }: HeroProps) => {
       <Typography as="h1" variant="h1" className="text-5xl leading-tight md:text-7xl lg:text-8xl">
         {title}
       </Typography>
-      <Typography as="p" variant="h3" className="mt-1 font-inter font-normal md:mt-2 lg:mt-4">
+      <Typography as="p" variant="h3" className="mt-1 font-inter font-normal md:mt-2 lg:mt-4 text-foreground">
         {description}
       </Typography>
       {children}

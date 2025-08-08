@@ -21,9 +21,9 @@ export const Typography: FC<TTypographyProps> = ({
     h2: 'h2',
     h3: 'h3',
     h4: 'h4',
-    p: 'p',
+    p: 'p text-muted-foreground',
     small: 'small',
   };
 
-  return <Tag className={clsx(className, baseStyles[variant])}>{children}</Tag>;
+  return <Tag className={clsx(baseStyles[variant], className)}>{children}</Tag>;
 };
