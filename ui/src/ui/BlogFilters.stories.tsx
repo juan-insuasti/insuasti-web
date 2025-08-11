@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BlogFilters } from './BlogFilters';
 
 const meta: Meta<typeof BlogFilters> = {
-  title: 'UI/BlogFilters',
+  title: 'Blog/Filters',
   component: BlogFilters,
   parameters: {
     layout: 'padded',

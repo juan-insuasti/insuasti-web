@@ -3,7 +3,7 @@ import { BlogPagination } from './BlogPagination';
 import { PaginatedBlogPosts } from '@/lib/blog-types';
 
 const meta: Meta<typeof BlogPagination> = {
-  title: 'UI/BlogPagination',
+  title: 'Blog/Pagination',
   component: BlogPagination,
   parameters: {
     layout: 'padded',

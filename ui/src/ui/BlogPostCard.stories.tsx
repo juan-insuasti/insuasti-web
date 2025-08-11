@@ -3,7 +3,7 @@ import { BlogPostCard } from './BlogPostCard';
 import { BlogPostMeta } from '@/lib/blog-types';
 
 const meta: Meta<typeof BlogPostCard> = {
-  title: 'UI/BlogPostCard',
+  title: 'Blog/PostCard',
   component: BlogPostCard,
   parameters: {
     layout: 'padded',
