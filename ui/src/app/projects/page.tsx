@@ -8,6 +8,7 @@ import { ProjectFilters } from '@/ui/ProjectFilters';
 import { ProjectHighlightCarousel } from '@/ui/ProjectHighlightCarousel';
 import { BlogPagination } from '@/ui/BlogPagination';
 import type { PaginatedBlogPosts } from '@/lib/blog-types';
+import Link from 'next/link';
 
 interface ProjectsPageProps {
   searchParams: Promise<ProjectSearchParams>;
@@ -69,8 +70,7 @@ export default function ProjectsPage({ searchParams }: ProjectsPageProps) {
               Projects
             </Typography>
             <Typography as="p" variant="p" className="mx-auto max-w-2xl text-muted-foreground">
-              Selected personal, open‑source and experimental builds. Highlighted items appear
-              first; use filters to explore by tech.
+              This is a curated list of side projects that I have been working on on my free time. Most of them are open source and available on <Link href="https://github.com/locke189/" className="text-primary">GitHub</Link>.
             </Typography>
           </header>
           <Suspense fallback={<div>Loading...</div>}>
