@@ -12,7 +12,7 @@ interface BlogPageProps {
 }
 
 const BLOG_TITLE = 'Blog';
-const BLOG_DESCRIPTION = `A mix of brain dumps, tech notes, and the occasional deep dive into frontend, web technologies, and electronics — all sprinkled with geek references and millennial pop culture. Some posts are old, others half-baked, but it reflects how I think, learn, build and have fun. You have been warned!`;
+const BLOG_DESCRIPTION = `A mix of brain dumps, tech notes, and the occasional deep dive into frontend, web technologies, and electronics... all sprinkled with geek references and millennial pop culture. Don't take it too seriously, it's just my digital playground!`;
 
 async function BlogPageContent({ searchParams }: BlogPageProps) {
   const awaitedSearchParams = await searchParams;

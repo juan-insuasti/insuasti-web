@@ -12,6 +12,9 @@ import { NodedotjsIcon } from './icons/NodedotjsIcon';
 import { OpenaiIcon } from './icons/OpenaiIcon';
 import { CssIcon } from './icons/CssIcon';
 import { ShadcnuiIcon } from './icons/ShadcnuiIcon';
+import { PostgresIcon } from './icons/PostgresIcon';
+import { ReactqueryIcon } from './icons/ReactqueryIcon';
+import { SupabaseIcon } from './icons/SupabaseIcon';
 
 export interface TechBadgeProps {
   tech: string;
@@ -37,6 +40,9 @@ const techIconMap: Record<string, { label: string; svg?: React.FC<React.SVGProps
   css: { label: 'CSS', svg: CssIcon },
   javascript: { label: 'JavaScript' },
   shadcnui: { label: 'Shadcn UI', svg: ShadcnuiIcon},
+  postgres: { label: 'PostgreSQL', svg: PostgresIcon },
+  supabase: { label: 'Supabase', svg: SupabaseIcon },
+  'react-query': { label: 'React Query', svg: ReactqueryIcon },
 };
 
 export function TechBadge({ tech, className, withLabel = true }: TechBadgeProps) {

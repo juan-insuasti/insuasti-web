@@ -20,6 +20,10 @@ const NavItems: Array<NavItem> = [
     title: 'Blog',
     href: '/blog',
   },
+  {
+    title: 'Projects',
+    href: '/projects',
+  },
 ];
 
 export function NavBar(): JSX.Element {

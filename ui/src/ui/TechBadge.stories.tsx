@@ -45,6 +45,9 @@ export const AllKnown: Story = {
       'css',
       'esp32',
       'iot',
+      'postgres',
+      'supabase',
+      'react-query',
     ];
     return (
       <div className="flex flex-wrap gap-2">
