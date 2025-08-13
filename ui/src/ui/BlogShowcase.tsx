@@ -23,8 +23,7 @@ export async function BlogShowcase() {
             Latest from the Blog
           </Typography>
           <Typography as="p" variant="p" className="mx-auto max-w-2xl text-muted-foreground">
-            Discover insights, tutorials, and thoughts on frontend development, React, and modern
-            web technologies.
+            {`From insights on frontend development to Raspberry Pi tips. Explore my latest articles and tutorials.`}
           </Typography>
         </div>
 
@@ -38,7 +37,7 @@ export async function BlogShowcase() {
                   Latest Post
                 </Typography>
               </div>
-              <div className="flex-grow max-w-none">
+              <div className="max-w-none flex-grow">
                 <BlogPostCard post={latestPost} />
               </div>
             </div>
@@ -56,7 +55,7 @@ export async function BlogShowcase() {
                   Highlighted
                 </div>
               </div>
-              <div className="flex-grow max-w-none">
+              <div className="max-w-none flex-grow">
                 {/* Featured post badge */}
                 <BlogPostCard post={highlightedPost} />
               </div>
@@ -68,7 +67,7 @@ export async function BlogShowcase() {
         <div className="mt-12 text-center">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors border-transparent border-2 hover:bg-primary/90 hover:text-foreground hover:border-primary"
+            className="inline-flex items-center gap-2 rounded-lg border-2 border-transparent bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:border-primary hover:bg-primary/90 hover:text-foreground"
           >
             Explore All Posts
             <ArrowRight className="h-4 w-4" />

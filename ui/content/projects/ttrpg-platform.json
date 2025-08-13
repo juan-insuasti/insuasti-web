@@ -2,12 +2,22 @@
   "slug": "ttrpg-platform",
   "title": "TTRPG Platform",
   "summary": "A platform for tabletop RPGs, featuring a Next.js 15 + React/TypeScript + Tailwind CSS + ReactQuery stack with a reusable design system, dark mode theming, and a content pipeline for markdown files. Database integration using Supabase.",
-  "tech": ["nextjs", "react", "typescript", "tailwindcss", "shadcnui", "supabase", "react-query", "postgres"],
+  "tech": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "shadcnui",
+    "supabase",
+    "react-query",
+    "postgres"
+  ],
   "coverImage": "/projects/ttrpg-cover.png",
   "screenshots": ["/projects/ttrpg-cover.png"],
   "repoUrl": "https://github.com/locke189/fe-ttrpg-management-tool",
   "demoUrl": "https://reverie.insuasti.com",
   "blogSlug": "",
   "date": "2025-08-09",
-  "status": "in-progress"
+  "status": "in-progress",
+  "highlighted": true
 }

@@ -49,8 +49,7 @@ export function getPaginatedProjects(
   techCsv?: string,
   search?: string,
 ): PaginatedProjects {
-  const highlighted = new Set(getHighlightedProjects().map((p) => p.slug));
-  let projects = getAllProjects().filter((p) => !highlighted.has(p.slug));
+  let projects = getAllProjects();
 
   if (techCsv) {
     const filterTech = techCsv
