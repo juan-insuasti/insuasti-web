@@ -32,24 +32,19 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 
   return {
-    title: `${post.title} | Blog | Insuasti.com`,
+    title: `${post.title} | Blog | insuasti.com`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
-      authors: [post.author],
       tags: post.tags,
-      url: `https://www.insuasti.com/blog/${slug}`,
-      images: [
-        {
-          url: `https://www.insuasti.com/og.png`,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
+      url: `https://insuasti.com/blog/${slug}`,
+    },
+    twitter: {
+      title: post.title,
+      description: post.excerpt,
     },
   };
 }
