@@ -7,6 +7,21 @@ import { getPaginatedPosts, getAllTags } from '@/lib/blog-utils';
 import { BlogSearchParams } from '@/lib/blog-types';
 import { Suspense } from 'react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | insuasti.com',
+  description: 'Articles on web development, electronics, and creative problem-solving.',
+  openGraph: {
+    title: 'Blog | insuasti.com',
+    description: 'Articles on web development, electronics, and creative problem-solving.',
+    url: 'https://insuasti.com/blog',
+  },
+  twitter: {
+    title: 'Blog | insuasti.com',
+    description: 'Articles on web development, electronics, and creative problem-solving.',
+  },
+};
 interface BlogPageProps {
   searchParams: Promise<BlogSearchParams>;
 }
