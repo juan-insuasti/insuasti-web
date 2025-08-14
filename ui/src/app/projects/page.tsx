@@ -10,6 +10,27 @@ import { BlogPagination } from '@/ui/BlogPagination';
 import type { PaginatedBlogPosts } from '@/lib/blog-types';
 import Link from 'next/link';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projects | insuasti.com',
+  description: 'A curated selection of web and electronics projects I’ve built.',
+  openGraph: {
+    title: 'Projects | insuasti.com',
+    description: 'A curated selection of web and electronics projects I’ve built.',
+    url: 'https://www.insuasti.com/projects',
+    images: [
+      {
+        url: 'https://www.insuasti.com/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Projects preview',
+      },
+    ],
+    type: 'website',
+  },
+};
+
 interface ProjectsPageProps {
   searchParams: Promise<ProjectSearchParams>;
 }
@@ -70,7 +91,12 @@ export default function ProjectsPage({ searchParams }: ProjectsPageProps) {
               Projects
             </Typography>
             <Typography as="p" variant="p" className="mx-auto max-w-2xl text-muted-foreground">
-              This is a curated list of side projects that I have been working on on my free time. Most of them are open source and available on <Link href="https://github.com/locke189/" className="text-primary">GitHub</Link>.
+              This is a curated list of side projects that I have been working on on my free time.
+              Most of them are open source and available on{' '}
+              <Link href="https://github.com/locke189/" className="text-primary">
+                GitHub
+              </Link>
+              .
             </Typography>
           </header>
           <Suspense fallback={<div>Loading...</div>}>
