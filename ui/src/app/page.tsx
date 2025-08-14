@@ -12,6 +12,7 @@ export default function Home() {
       Hi, I&apos;m <span className="text-primary">Juan&nbsp;Insuasti</span>
     </>
   );
+
   const HeroDescription =
     'A Frontend Developer turning design concepts into seamless digital experiences.';
 

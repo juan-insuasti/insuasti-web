@@ -2,23 +2,32 @@ import React from 'react';
 import { Typography } from '@/ui/Typography';
 
 import '@/app/globals.css';
+import { LogoIcon } from './icons/LogoIcon';
 
 export const GlobalFooter = () => {
   return (
     <footer className="relative w-full">
-      <div className="opacity-gradient-top-to-bottom absolute top-[-69px] h-[70px] w-full">
-        <div className="wave-3 absolute bottom-0 h-[70px] w-full bg-primary opacity-30" />
-        <div className="wave-1 absolute bottom-0 h-[50px] w-full bg-primary opacity-60" />
-        <div className="wave-2 absolute bottom-0 h-[30px] w-full bg-primary" />
-      </div>
-      <div className="w-full bg-primary">
-        <div className="flex flex-col items-center justify-center gap-3 py-6">
-          <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
-            © {new Date().getFullYear()} Juan Insuasti. All rights reserved.
-          </Typography>
-          <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
-            Handcrafted with <span className="text-red-500">❤️</span> by Juan Insuasti
-          </Typography>
+      <section className="mb-40 flex flex-col items-center justify-center gap-4 text-center">
+        <LogoIcon
+          className="h-32 w-32 fill-foreground"
+          aria-label="Logo of a floppy disk and a cat"
+        />
+      </section>
+      <div className="relative w-full">
+        <div className="opacity-gradient-top-to-bottom absolute top-[-69px] h-[70px] w-full">
+          <div className="wave-3 absolute bottom-0 h-[70px] w-full bg-primary opacity-30" />
+          <div className="wave-1 absolute bottom-0 h-[50px] w-full bg-primary opacity-60" />
+          <div className="wave-2 absolute bottom-0 h-[30px] w-full bg-primary" />
+        </div>
+        <div className="w-full bg-primary">
+          <div className="flex flex-col items-center justify-center gap-3 py-6">
+            <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
+              © {new Date().getFullYear()} Juan Insuasti. All rights reserved.
+            </Typography>
+            <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
+              Handcrafted with <span className="text-red-500">❤️</span> by Juan Insuasti
+            </Typography>
+          </div>
         </div>
       </div>
     </footer>

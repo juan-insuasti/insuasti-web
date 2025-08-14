@@ -309,7 +309,7 @@
 }
 
 .p {
-  @apply text-left font-inter text-lg font-normal lg:text-xl text-muted-foreground;
+  @apply text-left font-inter text-lg font-normal text-muted-foreground lg:text-xl;
 }
 
 .h1 {
@@ -335,9 +335,6 @@
 @layer base {
   * {
     @apply border-border;
-    transition:
-      background 0.2s ease-in-out,
-      color 0.2s ease-out;
   }
   body {
     @apply bg-background text-foreground;
