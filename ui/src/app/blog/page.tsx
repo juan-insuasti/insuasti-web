@@ -16,6 +16,15 @@ export const metadata: Metadata = {
     title: 'Blog | insuasti.com',
     description: 'Articles on web development, electronics, and creative problem-solving.',
     url: 'https://insuasti.com/blog',
+    images: [
+      {
+        url: 'https://www.insuasti.com/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Blog preview',
+      },
+    ],
+    type: 'website',
   },
   twitter: {
     title: 'Blog | insuasti.com',
