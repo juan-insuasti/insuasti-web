@@ -81,257 +81,6 @@
   }
 }
 
-/* Blog post content styling */
-.prose {
-  color: hsl(var(--foreground));
-}
-
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6 {
-  color: hsl(var(--foreground));
-  font-weight: 700;
-}
-
-.prose a {
-  color: hsl(var(--primary));
-  text-decoration: underline;
-  text-decoration-color: hsl(var(--primary) / 0.3);
-  transition: all 0.2s ease;
-}
-
-.prose a:hover {
-  text-decoration-color: hsl(var(--primary));
-}
-
-.prose code {
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--muted));
-  border-radius: 0.25rem;
-
-  font-size: 0.875em;
-}
-
-.prose pre {
-  background-color: transparent !important;
-  border: 1px solid transparent;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-  padding: 0;
-}
-
-.prose pre code {
-  background-color: black !important;
-  padding: 0;
-  color: inherit;
-  padding: 1rem;
-}
-
-.prose blockquote {
-  border-left: 4px solid hsl(var(--primary));
-  padding-left: 1rem;
-  font-style: italic;
-  color: hsl(var(--muted-foreground));
-}
-
-.prose img {
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  max-width: 100%;
-  height: auto;
-  margin: 1.5rem auto;
-  display: block;
-}
-
-.prose figure {
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.prose figure.markdown-figure {
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.prose figure img {
-  margin: 0 auto 0.5rem;
-}
-
-.prose figcaption {
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
-  font-style: italic;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.prose .markdown-figure img {
-  margin: 0 auto;
-  display: block;
-}
-
-.prose .markdown-figure figcaption {
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
-  font-style: italic;
-}
-
-.prose table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.prose th,
-.prose td {
-  border: 1px solid hsl(var(--border));
-  padding: 0.5rem 1rem;
-  text-align: left;
-}
-
-.prose th {
-  background-color: hsl(var(--muted));
-  font-weight: 600;
-}
-
-/* Heading anchor links */
-.heading-link {
-  text-decoration: none !important;
-  color: inherit;
-}
-
-.heading-link:hover {
-  color: hsl(var(--primary));
-}
-
-/* Custom list styling */
-.prose ul,
-.prose ol {
-  margin: 1rem 0;
-}
-
-.prose li {
-  margin: 0.5rem 0;
-}
-
-/* GitHub-style callouts (remark-blockquote-alerts) */
-.prose .markdown-alert {
-  margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
-  border-left: 4px solid;
-  border-radius: 0 0.5rem 0.5rem 0;
-  background-color: hsl(var(--muted) / 0.3);
-}
-
-.prose .markdown-alert-title {
-  font-weight: 600;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.prose .markdown-alert p {
-  margin: 0;
-  color: hsl(var(--foreground));
-}
-
-.prose .markdown-alert p + p {
-  margin-top: 0.75rem;
-}
-
-/* Note callout - Blue */
-.prose .markdown-alert-note {
-  border-left-color: hsl(221.2 83.2% 53.3%);
-  background-color: hsl(221.2 83.2% 53.3% / 0.1);
-}
-
-.prose .markdown-alert-note .markdown-alert-title {
-  color: hsl(221.2 83.2% 53.3%);
-}
-
-/* Important callout - Purple */
-.prose .markdown-alert-important {
-  border-left-color: hsl(271.5 81.3% 55.9%);
-  background-color: hsl(271.5 81.3% 55.9% / 0.1);
-}
-
-.prose .markdown-alert-important .markdown-alert-title {
-  color: hsl(271.5 81.3% 55.9%);
-}
-
-/* Warning callout - Orange */
-.prose .markdown-alert-warning {
-  border-left-color: hsl(38 92% 50%);
-  background-color: hsl(38 92% 50% / 0.1);
-}
-
-.prose .markdown-alert-warning .markdown-alert-title {
-  color: hsl(38 92% 50%);
-}
-
-/* Tip callout - Green */
-.prose .markdown-alert-tip {
-  border-left-color: hsl(142.1 76.2% 36.3%);
-  background-color: hsl(142.1 76.2% 36.3% / 0.1);
-}
-
-.prose .markdown-alert-tip .markdown-alert-title {
-  color: hsl(142.1 76.2% 36.3%);
-}
-
-/* Caution callout - Red */
-.prose .markdown-alert-caution {
-  border-left-color: hsl(0 84.2% 60.2%);
-  background-color: hsl(0 84.2% 60.2% / 0.1);
-}
-
-.prose .markdown-alert-caution .markdown-alert-title {
-  color: hsl(0 84.2% 60.2%);
-}
-
-/* Dark mode adjustments */
-.dark .prose {
-  color: hsl(var(--foreground));
-}
-
-.dark .prose pre {
-  background-color: transparent !important;
-}
-
-.dark .prose code {
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--muted));
-}
-
-.p {
-  @apply text-left font-inter text-lg font-normal text-muted-foreground lg:text-xl;
-}
-
-.h1 {
-  @apply text-left font-poppins text-4xl/9 font-bold uppercase md:text-5xl lg:text-6xl;
-}
-
-.h2 {
-  @apply text-left font-poppins text-3xl font-bold uppercase md:text-4xl lg:text-5xl;
-}
-
-.h3 {
-  @apply text-left font-inter text-2xl font-bold md:text-3xl lg:text-4xl;
-}
-
-.h4 {
-  @apply text-left font-inter text-xl font-bold md:text-2xl lg:text-3xl;
-}
-
-.small {
-  @apply font-inter text-xs font-normal text-gray-500;
-}
-
 @layer base {
   * {
     @apply border-border;
@@ -342,6 +91,31 @@
   html {
     @apply scroll-smooth;
   }
+
+  .p {
+    @apply text-left font-inter text-lg font-normal text-muted-foreground lg:text-xl;
+  }
+
+  .h1 {
+    @apply text-left font-poppins text-4xl/9 font-bold uppercase md:text-5xl lg:text-6xl;
+  }
+
+  .h2 {
+    @apply text-left font-poppins text-3xl font-bold uppercase md:text-4xl lg:text-5xl;
+  }
+
+  .h3 {
+    @apply text-left font-inter text-2xl font-bold md:text-3xl lg:text-4xl;
+  }
+
+  .h4 {
+    @apply text-left font-inter text-xl font-bold md:text-2xl lg:text-3xl;
+  }
+
+  .small {
+    @apply font-inter text-xs font-normal text-gray-500;
+  }
+
   h1 {
     @apply h1;
   }
@@ -359,6 +133,233 @@
   }
   small {
     @apply small;
+  }
+
+  /* Blog post content styling */
+  .prose {
+    color: hsl(var(--foreground));
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    color: hsl(var(--foreground));
+    font-weight: 700;
+  }
+
+  .prose a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--primary) / 0.3);
+    transition: all 0.2s ease;
+  }
+
+  .prose a:hover {
+    text-decoration-color: hsl(var(--primary));
+  }
+
+  .prose code {
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--muted));
+    border-radius: 0.25rem;
+
+    font-size: 0.875em;
+  }
+
+  .prose pre {
+    background-color: transparent !important;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .prose pre code {
+    background-color: black !important;
+    padding: 0;
+    color: inherit;
+    padding: 1rem;
+  }
+
+  .prose blockquote {
+    border-left: 4px solid hsl(var(--primary));
+    padding-left: 1rem;
+    font-style: italic;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .prose img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    display: block;
+  }
+
+  .prose figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .prose figure.markdown-figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .prose figure img {
+    margin: 0 auto 0.5rem;
+  }
+
+  .prose figcaption {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .prose .markdown-figure img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .prose .markdown-figure figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+    font-style: italic;
+  }
+
+  .prose table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .prose th,
+  .prose td {
+    border: 1px solid hsl(var(--border));
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+
+  .prose th {
+    background-color: hsl(var(--muted));
+    font-weight: 600;
+  }
+
+  /* Heading anchor links */
+  .heading-link {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  .heading-link:hover {
+    color: hsl(var(--primary));
+  }
+
+  /* Custom list styling */
+  .prose ul,
+  .prose ol {
+    margin: 1rem 0;
+  }
+
+  .prose li {
+    margin: 0.5rem 0;
+  }
+
+  /* GitHub-style callouts (remark-blockquote-alerts) */
+  .prose .markdown-alert {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-color: hsl(var(--muted) / 0.3);
+  }
+
+  .prose .markdown-alert-title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .prose .markdown-alert p {
+    margin: 0;
+    color: hsl(var(--foreground));
+  }
+
+  .prose .markdown-alert p + p {
+    margin-top: 0.75rem;
+  }
+
+  /* Note callout - Blue */
+  .prose .markdown-alert-note {
+    border-left-color: hsl(221.2 83.2% 53.3%);
+    background-color: hsl(221.2 83.2% 53.3% / 0.1);
+  }
+
+  .prose .markdown-alert-note .markdown-alert-title {
+    color: hsl(221.2 83.2% 53.3%);
+  }
+
+  /* Important callout - Purple */
+  .prose .markdown-alert-important {
+    border-left-color: hsl(271.5 81.3% 55.9%);
+    background-color: hsl(271.5 81.3% 55.9% / 0.1);
+  }
+
+  .prose .markdown-alert-important .markdown-alert-title {
+    color: hsl(271.5 81.3% 55.9%);
+  }
+
+  /* Warning callout - Orange */
+  .prose .markdown-alert-warning {
+    border-left-color: hsl(38 92% 50%);
+    background-color: hsl(38 92% 50% / 0.1);
+  }
+
+  .prose .markdown-alert-warning .markdown-alert-title {
+    color: hsl(38 92% 50%);
+  }
+
+  /* Tip callout - Green */
+  .prose .markdown-alert-tip {
+    border-left-color: hsl(142.1 76.2% 36.3%);
+    background-color: hsl(142.1 76.2% 36.3% / 0.1);
+  }
+
+  .prose .markdown-alert-tip .markdown-alert-title {
+    color: hsl(142.1 76.2% 36.3%);
+  }
+
+  /* Caution callout - Red */
+  .prose .markdown-alert-caution {
+    border-left-color: hsl(0 84.2% 60.2%);
+    background-color: hsl(0 84.2% 60.2% / 0.1);
+  }
+
+  .prose .markdown-alert-caution .markdown-alert-title {
+    color: hsl(0 84.2% 60.2%);
+  }
+
+  /* Dark mode adjustments */
+  .dark .prose {
+    color: hsl(var(--foreground));
+  }
+
+  .dark .prose pre {
+    background-color: transparent !important;
+  }
+
+  .dark .prose code {
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--muted));
   }
 
   .wave-1 {
