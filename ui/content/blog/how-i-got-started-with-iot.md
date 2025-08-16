@@ -12,11 +12,11 @@ highlighted: true
 
 For those of you who don’t know what Internet of Things is, think about a Terminator movie where machines have taken over the world and subtract the evil AI that wants to kill all humans (at least for now), and we have a world where all the devices you could imagine (cars, vending machines, planes, microwaves, fridges, lightbulbs, so on and so forth) are interconnected and sharing information about… well… everything, and taking ’smart’ decisions based on that information.
 
-![Let’s face it… John Connor doesn’t have a chance against Google.](/terminator.webp)
+![Let’s face it… John Connor doesn’t have a chance against Google.](/blog/terminator.webp)
 
 IoT refers to the interconnection of devices rather than people, communication between machines and the automation of certain actions based on the information this machines gather from themselves and from other nearby devices.
 
-![IoT is much more than a Smart Fridge…](/fridge.webp)
+![IoT is much more than a Smart Fridge…](/blog/fridge.webp)
 
 How can you benefit from IoT? Imagine yourself driving to home while a small device tells you the fastest route to get there…wait a minute… thats Waze, let me try again… Imagine yourself going to the gym and instead of having a personal instructor there is a device that tells you what to do, if your heart beat is too fast or too slow for some exercise it lets you know… ok that sounds like a Fitbit band. Imagine a city where the traffic lights switch with the sole purpose of reducing traffic jams based on real time information rather than a timer. Or just imagine the savings if machines tell you if they maintenance way before they stop working… if it is your car it may save your life, if it is your industry it may save you from stopping the operation to replace a faulty machine. I can think of a lot of examples… but I will leave it there for now.
 
@@ -28,6 +28,6 @@ I’m not going to bore you with the ‘highlights’ of the course but i will t
 
 I knew that there was much more to IoT and I could do a lot more on my own. Therefore, I decided to start my own IoT projects and learn how to do it on my own. Armed with my electronics engineer skills and my faithful raspberry pi (the best gift someone has ever given to me) I began this journey that has led me to write this blog that you are reading right now.
 
-![The bonsai to be automated](/bonsai.webp)
+![The bonsai to be automated](/blog/bonsai.webp)
 
 In my next entry I will explain my current project: a smart watering system for my bonsai.
