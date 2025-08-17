@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'Insuasti.com',
     images: [
       {
-        url: 'https://insuasti.com/og.png',
+        url: 'https://insuasti.com/og.png?v=2',
         width: 1200,
         height: 630,
         alt: "Juan Insuasti's Portfolio",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     creator: '@JuanInsuasti4',
     title: 'insuasti.com | Juan Insuasti - Frontend Developer',
     description: 'A playground site where I showcase my projects and host my personal blog.',
-    images: ['https://insuasti.com/og.png'],
+    images: ['https://insuasti.com/og.png?v=2'],
   },
   metadataBase: new URL('https://insuasti.com'),
   alternates: {
