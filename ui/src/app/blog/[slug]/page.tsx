@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
       url: `https://insuasti.com/blog/${slug}`,
       images: [
         {
-          url: 'https://insuasti.com/og.png',
+          url: 'https://insuasti.com/og.png?v=2',
           width: 1200,
           height: 630,
           alt: `${post.title} | preview`,
