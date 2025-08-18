@@ -5,7 +5,7 @@
   "tech": ["nextjs", "react", "typescript", "tailwindcss", "shadcnui"],
   "coverImage": "/projects/homepage-cover.png",
   "screenshots": ["/projects/homepage-cover.png"],
-  "repoUrl": "https://github.com/locke189/insuasti-web",
+  "repoUrl": "https://github.com/juan-insuasti/insuasti-web",
   "demoUrl": "https://insuasti.com",
   "blogSlug": "",
   "date": "2025-05-12",

@@ -24,7 +24,7 @@ const baseProject: ProjectMeta = {
   tech: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcnui', 'radix-ui', 'openai'],
   coverImage: '/projects/insuasti-site/homepage.png',
   screenshots: ['/projects/insuasti-site/homepage.png'],
-  repoUrl: 'https://github.com/locke189/insuasti-web',
+  repoUrl: 'https://github.com/juan-insuasti/insuasti-web',
   demoUrl: 'https://insuasti.com',
   blogSlug: '',
   date: '2025-05-12',
@@ -38,18 +38,33 @@ export const Stable: StoryObj<typeof ProjectCard> = {
 
 export const InProgress: StoryObj<typeof ProjectCard> = {
   args: {
-    project: { ...baseProject, status: 'in-progress', title: 'Refactoring UI System', slug: 'refactor-ui' },
+    project: {
+      ...baseProject,
+      status: 'in-progress',
+      title: 'Refactoring UI System',
+      slug: 'refactor-ui',
+    },
   },
 };
 
 export const Beta: StoryObj<typeof ProjectCard> = {
   args: {
-    project: { ...baseProject, status: 'beta', title: 'Experimental Analytics Dashboard', slug: 'analytics-dashboard' },
+    project: {
+      ...baseProject,
+      status: 'beta',
+      title: 'Experimental Analytics Dashboard',
+      slug: 'analytics-dashboard',
+    },
   },
 };
 
 export const Archived: StoryObj<typeof ProjectCard> = {
   args: {
-    project: { ...baseProject, status: 'archived', title: 'Legacy IoT Prototype', slug: 'legacy-iot' },
+    project: {
+      ...baseProject,
+      status: 'archived',
+      title: 'Legacy IoT Prototype',
+      slug: 'legacy-iot',
+    },
   },
 };

@@ -8,7 +8,7 @@ export const SOCIAL_LINKS = [
     alt: 'Linkedin Profile',
   },
   {
-    href: 'https://github.com/locke189',
+    href: 'https://github.com/juan-insuasti',
     src: githubIMG,
     alt: 'Github Repositories',
   },

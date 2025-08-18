@@ -93,7 +93,7 @@ export default function ProjectsPage({ searchParams }: ProjectsPageProps) {
             <Typography as="p" variant="p" className="mx-auto max-w-2xl text-muted-foreground">
               This is a curated list of side projects that I have been working on on my free time.
               Most of them are open source and available on{' '}
-              <Link href="https://github.com/locke189/" className="text-primary">
+              <Link href="https://github.com/juan-insuasti/" className="text-primary">
                 GitHub
               </Link>
               .
