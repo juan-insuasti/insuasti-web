@@ -26,7 +26,7 @@ const base: ProjectMeta = {
   tech: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcnui'],
   coverImage: '/projects/insuasti-site/homepage.png',
   screenshots: ['/projects/insuasti-site/homepage.png'],
-  repoUrl: 'https://github.com/locke189/insuasti-web',
+  repoUrl: 'https://github.com/juan-insuasti/insuasti-web',
   demoUrl: 'https://insuasti.com',
   blogSlug: '',
   date: '2025-05-12',
@@ -44,8 +44,20 @@ export const Multiple: Story = {
   args: {
     projects: [
       base,
-      { ...base, slug: 'analytics', title: 'Analytics Dashboard', status: 'beta', tech: ['nextjs','react','openai','vercel'] },
-      { ...base, slug: 'iot-platform', title: 'IoT Device Manager', status: 'in-progress', tech: ['esp32','iot','typescript','node'] },
+      {
+        ...base,
+        slug: 'analytics',
+        title: 'Analytics Dashboard',
+        status: 'beta',
+        tech: ['nextjs', 'react', 'openai', 'vercel'],
+      },
+      {
+        ...base,
+        slug: 'iot-platform',
+        title: 'IoT Device Manager',
+        status: 'in-progress',
+        tech: ['esp32', 'iot', 'typescript', 'node'],
+      },
     ],
   },
 };
