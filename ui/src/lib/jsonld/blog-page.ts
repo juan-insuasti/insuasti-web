@@ -37,12 +37,12 @@ export const blogPageJsonLd = () => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'Blog | Insuasti',
+      name: 'Blog | insuasti.com',
       url: 'https://insuasti.com/blog',
       description: 'Articles on web development, electronics, and creative problem-solving.',
       isPartOf: {
         '@type': 'WebSite',
-        name: 'Insuasti',
+        name: 'Juan Insuasti | insuasti.com',
         url: 'https://insuasti.com/',
       },
       author: {

@@ -24,8 +24,28 @@ export const homepageJsonLd = () => {
       hasOccupation: {
         '@type': 'Occupation',
         name: 'Frontend Developer',
+        description:
+          'Building user-friendly web applications with a focus on performance and accessibility.',
+        estimatedSalary: {
+          '@type': 'MonetaryAmount',
+          currency: 'USD',
+          value: {
+            '@type': 'QuantitativeValue',
+            value: 0,
+            unitText: 'MONTH',
+          },
+        },
+        occupationLocation: {
+          '@type': 'Place',
+          name: 'Medellín, Colombia',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Medellín',
+            addressCountry: 'CO',
+          },
+        },
       },
-      author: [
+      citation: [
         {
           '@type': 'CreativeWork',
           name: 'TTRPG Platform',
@@ -52,7 +72,7 @@ export const homepageJsonLd = () => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'Insuasti - Juan Insuasti Portfolio',
+      name: 'Juan Insuasti | insuasti.com',
       url: 'https://insuasti.com/',
       description:
         'Portfolio and blog of Juan Insuasti, frontend developer specializing in React, TypeScript, and modern web technologies.',
