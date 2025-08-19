@@ -33,7 +33,7 @@ export const blogPostJsonLd = (post: BlogPost) => {
       },
       isPartOf: {
         '@type': 'Blog',
-        name: 'Insuasti Blog',
+        name: 'Blog | insuasti.com',
         url: 'https://insuasti.com/blog',
       },
       image: {

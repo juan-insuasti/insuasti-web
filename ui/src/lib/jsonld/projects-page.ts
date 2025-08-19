@@ -72,12 +72,12 @@ export const projectsPageJsonLd = (projects: ProjectMeta[] = []) => {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'Projects | Insuasti',
+      name: 'Projects | insuasti.com',
       url: 'https://insuasti.com/projects',
       description: "A curated selection of web and electronics projects I've built.",
       isPartOf: {
         '@type': 'WebSite',
-        name: 'Insuasti',
+        name: 'Juan Insuasti | insuasti.com',
         url: 'https://insuasti.com/',
       },
       author: {

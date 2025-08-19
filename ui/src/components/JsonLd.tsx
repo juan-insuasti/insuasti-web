@@ -1,5 +1,4 @@
-import Script from 'next/script';
-
+import Head from 'next/head';
 interface JsonLdProps {
   data: object | object[];
 }
@@ -9,16 +8,15 @@ interface JsonLdProps {
  * Accepts either a single schema object or an array of schema objects
  */
 export function JsonLd({ data }: JsonLdProps) {
-  const jsonData = Array.isArray(data) ? data : [data];
   return (
-    <>
-      <Script
+    <Head>
+      <script
         id={`jsonld`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonData),
+          __html: JSON.stringify(data).replace(/</g, '\\u003c'),
         }}
       />
-    </>
+    </Head>
   );
 }
