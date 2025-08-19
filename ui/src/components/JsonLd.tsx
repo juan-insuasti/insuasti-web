@@ -1,4 +1,3 @@
-import Head from 'next/head';
 interface JsonLdProps {
   data: object | object[];
 }
@@ -9,7 +8,7 @@ interface JsonLdProps {
  */
 export function JsonLd({ data }: JsonLdProps) {
   return (
-    <Head>
+    <>
       <script
         id={`jsonld`}
         type="application/ld+json"
@@ -17,6 +16,6 @@ export function JsonLd({ data }: JsonLdProps) {
           __html: JSON.stringify(data).replace(/</g, '\\u003c'),
         }}
       />
-    </Head>
+    </>
   );
 }
