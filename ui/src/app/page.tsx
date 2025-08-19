@@ -5,6 +5,8 @@ import { SocialLinks } from '@/ui/SocialLinks';
 import { NavBar } from '@/ui/navbar/NavBar';
 import { BlogShowcase } from '@/ui/BlogShowcase';
 import { ProjectShowcase } from '@/ui/ProjectShowcase';
+import { JsonLd } from '@/components/JsonLd';
+import { homepageJsonLd } from '@/lib/jsonld';
 
 export default function Home() {
   const HeroTitle = (
@@ -18,6 +20,7 @@ export default function Home() {
 
   return (
     <>
+      <JsonLd data={homepageJsonLd()} />
       <NavBar />
       <div className="mb-28 flex justify-center md:mb-0">
         <div className="container">

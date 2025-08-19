@@ -7,6 +7,8 @@ import { BlogPostCard } from '@/ui/BlogPostCard';
 import { Typography } from '@/ui/Typography';
 import { getPostBySlug, getRelatedPosts, getAllPosts } from '@/lib/blog-utils';
 import { renderMarkdown } from '@/lib/markdown-utils';
+import { JsonLd } from '@/components/JsonLd';
+import { blogPostJsonLd } from '@/lib/jsonld';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -70,6 +72,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
+      <JsonLd data={blogPostJsonLd(post)} />
       <NavBar />
       <div className="min-h-screen pb-28 pt-20">
         <div className="container mx-auto px-4">
