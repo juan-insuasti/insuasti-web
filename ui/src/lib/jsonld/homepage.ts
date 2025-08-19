@@ -8,9 +8,13 @@ export const homepageJsonLd = () => {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Juan Insuasti',
+      givenName: 'Juan',
+      familyName: 'Insuasti',
       url: 'https://insuasti.com/',
+      email: 'juan.insuasti@gmail.com',
+      jobTitle: 'Senior Frontend Engineer',
       description:
-        'Frontend developer building sleek, accessible, high-performance web applications using React, TypeScript, Next.js, Remix, GraphQL, REST. Focused on scalable, intuitive UIs.',
+        'Passionate about crafting helpful, delightful user experiences with a strong eye for detail. I work closely with design and product teams, building thoughtful experiences in cross-functional, multicultural environments.',
       knowsAbout: [
         'React',
         'TypeScript',
@@ -18,54 +22,109 @@ export const homepageJsonLd = () => {
         'Remix',
         'GraphQL',
         'REST',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Sass',
+        'Tailwind CSS',
+        'CSS Modules',
+        'ReactQuery',
+        'Redux',
+        'Zustand',
+        'Jest',
+        'Vitest',
+        'Storybook',
+        'Cypress',
+        'Node.js',
+        'Vercel',
+        'AWS',
+        'Google Cloud',
+        'Docker',
         'Accessibility',
+        'WCAG AA',
         'UI/UX',
+        'Performance',
+        'Architecture',
       ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Medellín',
+        addressRegion: 'Antioquia',
+        addressCountry: 'CO',
+      },
+      sameAs: ['https://github.com/juan-insuasti', 'https://linkedin.com/in/jinsuasti'],
       hasOccupation: {
         '@type': 'Occupation',
-        name: 'Frontend Developer',
+        name: 'Senior Frontend Engineer',
         description:
           'Building user-friendly web applications with a focus on performance and accessibility.',
-        estimatedSalary: {
-          '@type': 'MonetaryAmount',
-          currency: 'USD',
-          value: {
-            '@type': 'QuantitativeValue',
-            value: 0,
-            unitText: 'MONTH',
-          },
-        },
         occupationLocation: {
-          '@type': 'Place',
+          '@type': 'AdministrativeArea',
           name: 'Medellín, Colombia',
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Medellín',
+            addressRegion: 'Antioquia',
             addressCountry: 'CO',
           },
         },
       },
-      citation: [
+      alumniOf: {
+        '@type': 'EducationalOrganization',
+        name: 'Universidad Javeriana',
+        location: {
+          '@type': 'Place',
+          name: 'Bogotá, Colombia',
+        },
+      },
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'degree',
+        educationalLevel: 'undergraduate',
+        name: 'Electronic Engineer',
+        recognizedBy: {
+          '@type': 'EducationalOrganization',
+          name: 'Universidad Javeriana',
+        },
+      },
+      knowsLanguage: [
         {
-          '@type': 'CreativeWork',
-          name: 'TTRPG Platform',
-          description:
-            'A platform for tabletop RPGs. Built with Next.js 15, React/TypeScript, Tailwind CSS, React-Query, dark mode theming, design system, Supabase backend.',
-          url: 'https://insuasti.com/projects',
-          dateCreated: '2025-08-09',
+          '@type': 'Language',
+          name: 'Spanish',
         },
         {
-          '@type': 'CreativeWork',
-          name: 'Personal Portfolio & Blog Platform',
-          description:
-            'Next.js 15 + React/TypeScript platform with reusable design system, dark mode theming, markdown content pipeline, SEO-ready pages.',
-          url: 'https://insuasti.com/projects',
-          dateCreated: '2025-05-12',
+          '@type': 'Language',
+          name: 'English',
+        },
+        {
+          '@type': 'Language',
+          name: 'Japanese',
         },
       ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Frontend Development Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'React Development',
+              description: 'Building scalable React applications with TypeScript',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Next.js Development',
+              description: 'Full-stack Next.js applications with modern tooling',
+            },
+          },
+        ],
+      },
       mainEntityOfPage: {
-        '@type': 'WebSite',
-        name: 'Insuasti',
+        '@type': 'WebPage',
         url: 'https://insuasti.com/',
       },
     },
@@ -73,20 +132,23 @@ export const homepageJsonLd = () => {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Juan Insuasti | insuasti.com',
+      alternateName: 'Insuasti',
       url: 'https://insuasti.com/',
       description:
-        'Portfolio and blog of Juan Insuasti, frontend developer specializing in React, TypeScript, and modern web technologies.',
+        'Portfolio and blog of Juan Insuasti, Senior Frontend Engineer specializing in React, TypeScript, Next.js, and modern web technologies.',
       author: {
         '@type': 'Person',
         name: 'Juan Insuasti',
+        jobTitle: 'Senior Frontend Engineer',
       },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://insuasti.com/blog?search={search_term_string}',
-        },
-        'query-input': 'required name=search_term_string',
+      publisher: {
+        '@type': 'Person',
+        name: 'Juan Insuasti',
+      },
+      inLanguage: ['en'],
+      mainEntity: {
+        '@type': 'Person',
+        name: 'Juan Insuasti',
       },
     },
   ];
