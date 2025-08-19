@@ -2,13 +2,20 @@ import { NavBar } from '@/ui/navbar/NavBar';
 import { Typography } from '@/ui/Typography';
 import { Suspense } from 'react';
 import { ProjectSearchParams } from '@/lib/project-types';
-import { getPaginatedProjects, getAllTech, getHighlightedProjects } from '@/lib/project-utils';
+import {
+  getPaginatedProjects,
+  getAllTech,
+  getHighlightedProjects,
+  getAllProjects,
+} from '@/lib/project-utils';
 import { ProjectCard } from '@/ui/ProjectCard';
 import { ProjectFilters } from '@/ui/ProjectFilters';
 import { ProjectHighlightCarousel } from '@/ui/ProjectHighlightCarousel';
 import { BlogPagination } from '@/ui/BlogPagination';
 import type { PaginatedBlogPosts } from '@/lib/blog-types';
 import Link from 'next/link';
+import { JsonLd } from '@/components/JsonLd';
+import { projectsPageJsonLd } from '@/lib/jsonld';
 
 import type { Metadata } from 'next';
 
@@ -81,8 +88,11 @@ async function ProjectsPageContent({ searchParams }: ProjectsPageProps) {
 }
 
 export default function ProjectsPage({ searchParams }: ProjectsPageProps) {
+  const allProjects = getAllProjects();
+
   return (
     <>
+      <JsonLd data={projectsPageJsonLd(allProjects)} />
       <NavBar />
       <div className="min-h-screen pb-28 pt-20">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">

@@ -38,7 +38,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  themeColor: '#008000', // change to your brand color
 };
 
 export default function RootLayout({
