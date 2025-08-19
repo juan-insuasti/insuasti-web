@@ -11,7 +11,7 @@ export const homepageJsonLd = () => {
       url: 'https://insuasti.com/',
       description:
         'Frontend developer building sleek, accessible, high-performance web applications using React, TypeScript, Next.js, Remix, GraphQL, REST. Focused on scalable, intuitive UIs.',
-      knowsTechnology: [
+      knowsAbout: [
         'React',
         'TypeScript',
         'Next.js',
@@ -25,7 +25,7 @@ export const homepageJsonLd = () => {
         '@type': 'Occupation',
         name: 'Frontend Developer',
       },
-      workExample: [
+      author: [
         {
           '@type': 'CreativeWork',
           name: 'TTRPG Platform',
