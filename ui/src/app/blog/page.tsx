@@ -6,6 +6,8 @@ import { BlogPagination } from '@/ui/BlogPagination';
 import { getPaginatedPosts, getAllTags } from '@/lib/blog-utils';
 import { BlogSearchParams } from '@/lib/blog-types';
 import { Suspense } from 'react';
+import { JsonLd } from '@/components/JsonLd';
+import { blogPageJsonLd } from '@/lib/jsonld';
 
 import type { Metadata } from 'next';
 
@@ -96,6 +98,7 @@ async function BlogPageContent({ searchParams }: BlogPageProps) {
 export default function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <>
+      <JsonLd data={blogPageJsonLd()} />
       <NavBar />
       <div className="min-h-screen pb-28 pt-20">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
