@@ -1,11 +1,14 @@
 ---
 title: 'Creating a Homepage in 2025'
-excerpt: 'My journey of building a personal homepage and portfolio in 2025.'
+excerpt: "After getting laid off and losing job opportunities for not having a portfolio, I decided to finally build the homepage I'd been neglecting."
 date: '2025-08-12'
-tags: ['homepage', 'portfolio', 'Next.js', 'web development', 'personal project']
+tags: ['Homepage', 'Portfolio', 'Next.js', 'Web Development']
 author: Juan insuasti
 publish: '2025-08-12'
+highlighted: true
 ---
+
+> This is part 1 of creating a homepage in 2025. This will probably become a series so buckle up.
 
 The beginning of 2025 was very rough for me and my family. I got laid off, and days after that, one of my eldest cats died a week before my birthday.. When I got myself together, I started looking for a new job, I went into the job market again (sarcastic yay!). Fortunately, I had a lot of interviews and, unfortunately, many people asked for my website and my portfolio, which I did not have prepared, so I lost a couple of good opportunities. I have to be honest: I have been neglecting that task since I got my first job as a Frontend developer.
 
@@ -24,3 +27,5 @@ As soon as I had the MVP ready (which was a navbar, a hero, and the About Me sec
 Since I have to juggle between my job and this side project, I think it's a good opportunity to use AI. I have been adamant against the use of AI while learning, but I will give in to the AI hype and start using copilot (I have been paying for it for a year—it is the best autocomplete I've used in my life, and it has also made working with TypeScript less painful). So far, I've had mixed results, sometimes exceeding my expectations and in some cases being painfully frustrating. But this is a topic for another post.
 
 So far I've built quite a lot, but there is still a lot of things to do. I will try to post updates more frequently and maybe start writing more technical posts. Until then, (as my niece would say) live long and prosper.
+
+Next up: [Embracing AI Overlords: getting started](/blog/embracing-ai-overlords)
