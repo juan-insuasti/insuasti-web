@@ -3,7 +3,7 @@ title: 'Recovering old posts and giving them a new home'
 date: '2025-08-07'
 author: 'Juan Insuasti'
 excerpt: 'How I recovered some of my old blog posts and migrated them to this new site.'
-tags: ['blog']
+tags: ['Blog']
 publish: '2025-08-07'
 ---
 

@@ -3,7 +3,7 @@ title: 'IoT Walkthrough: Epilogue'
 date: '2017-06-11'
 author: 'Juan Insuasti'
 excerpt: 'An introduction of what I intend to do with this blog entries…'
-tags: ['iot']
+tags: ['IoT', 'Archived']
 publish: '2025-08-07'
 ---
 

@@ -3,9 +3,8 @@ title: 'How I got started with IoT'
 date: '2017-05-27'
 author: 'Juan Insuasti'
 excerpt: 'A ‘short’ intro of the beginning of my journey…'
-tags: ['iot', 'archived']
+tags: ['IoT', 'Archived']
 publish: '2025-08-07'
-highlighted: true
 ---
 
 > This post was originally published on my old blog in 2017. It has been migrated here for continuity. Don't be to harsh on my old self, it's been a while since I wrote this!
