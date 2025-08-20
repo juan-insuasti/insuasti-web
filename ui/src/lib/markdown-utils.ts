@@ -7,10 +7,12 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeFigure from 'rehype-figure';
 import rehypeStringify from 'rehype-stringify';
+import remarkAlerts from 'remark-blockquote-alerts';
 
 export async function renderMarkdown(content: string): Promise<string> {
   const result = await unified()
     .use(remarkParse)
+    .use(remarkAlerts)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeSlug)
@@ -21,7 +23,7 @@ export async function renderMarkdown(content: string): Promise<string> {
       },
     })
     .use(rehypeFigure, {
-      className: 'markdown-figure'
+      className: 'markdown-figure',
     })
     .use(rehypeHighlight)
     .use(rehypeStringify, { allowDangerousHtml: true })
