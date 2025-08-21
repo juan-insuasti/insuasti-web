@@ -25,7 +25,7 @@ export async function ProjectShowcase() {
           </div>
 
           <div className="relative">
-            <div className="mb-4 flex items-center justify-center gap-2">
+            <div className="mb-12 flex items-center justify-center gap-2">
               <Sparkles className="h-5 w-5 animate-pulse text-primary" />
               <span className="text-sm font-medium uppercase tracking-wide text-primary">
                 Featured Work
@@ -63,7 +63,7 @@ export async function ProjectShowcase() {
 
             <Link
               href="/projects"
-              className="group relative inline-flex items-center gap-3 rounded-lg border-2 border-transparent bg-gradient-to-r from-primary to-primary/90 px-8 py-4 font-semibold text-foreground transition-all duration-300 hover:scale-105 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/25"
+              className="group relative inline-flex items-center gap-3 rounded-lg border-2 border-transparent bg-gradient-to-r from-primary to-primary/90 px-8 py-4 font-semibold text-foreground transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/25"
             >
               <span>Explore All Projects</span>
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
