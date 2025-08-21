@@ -20,13 +20,17 @@ export interface TechBadgeProps {
   tech: string;
   className?: string;
   withLabel?: boolean;
+  tooltipTechList?: (keyof typeof techIconMap)[];
 }
 
 // Curated mapping for icons (can expand). Using simple inline SVG placeholders or existing public assets.
 // For technologies not in the map, we show the uppercase first letter.
-const techIconMap: Record<string, { label: string; svg?: React.FC<React.SVGProps<SVGSVGElement>>;  }> = {
-  nextjs: { label: 'Next.js', svg: NextdotjsIcon  },
-  react: { label: 'React', svg: ReactIcon, },
+const techIconMap: Record<
+  string,
+  { label: string; svg?: React.FC<React.SVGProps<SVGSVGElement>> }
+> = {
+  nextjs: { label: 'Next.js', svg: NextdotjsIcon },
+  react: { label: 'React', svg: ReactIcon },
   typescript: { label: 'TypeScript', svg: TypescriptIcon },
   tailwindcss: { label: 'Tailwind CSS', svg: TailwindcssIcon },
   'radix-ui': { label: 'Radix UI', svg: RadixuiIcon },
@@ -39,26 +43,34 @@ const techIconMap: Record<string, { label: string; svg?: React.FC<React.SVGProps
   zustand: { label: 'Zustand' },
   css: { label: 'CSS', svg: CssIcon },
   javascript: { label: 'JavaScript' },
-  shadcnui: { label: 'Shadcn UI', svg: ShadcnuiIcon},
+  shadcnui: { label: 'Shadcn UI', svg: ShadcnuiIcon },
   postgres: { label: 'PostgreSQL', svg: PostgresIcon },
   supabase: { label: 'Supabase', svg: SupabaseIcon },
   'react-query': { label: 'React Query', svg: ReactqueryIcon },
 };
 
-export function TechBadge({ tech, className, withLabel = true }: TechBadgeProps) {
+export function TechBadge({ tech, className, withLabel = true, tooltipTechList }: TechBadgeProps) {
   const key = tech.toLowerCase();
   const meta = techIconMap[key] || { label: tech };
+
+  const tooltipText = tooltipTechList
+    ? tooltipTechList
+        .map((item: keyof typeof techIconMap) => techIconMap[item]?.label || item)
+        .join(', ')
+    : meta.label;
+
   const badge = (
     <span
       className={cn(
-        'inline-flex items-center gap-1 rounded-md border bg-muted px-2 py-1 text-xs font-medium text-foreground border-muted',
+        'inline-flex items-center gap-1 rounded-md border border-muted-foreground/20 bg-muted/50 px-2 py-1 text-xs font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-primary/10',
         className,
       )}
     >
-      {meta.svg && <span className="inline-flex h-4 w-4 items-center justify-center rounded-sm bg-transparent text-[0.55rem] font-bold text-black">
-            {<meta.svg className='h-4 w-4 fill-black dark:fill-white'/>}
-      </span>
-      }
+      {meta.svg && (
+        <span className="inline-flex h-4 w-4 items-center justify-center rounded-sm bg-transparent text-[0.55rem] font-bold text-black">
+          {<meta.svg className="h-4 w-4 fill-black dark:fill-white" />}
+        </span>
+      )}
       {withLabel && (
         <span className="align-center flex items-center justify-center">{meta.label}</span>
       )}
@@ -69,7 +81,7 @@ export function TechBadge({ tech, className, withLabel = true }: TechBadgeProps)
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>{badge}</TooltipTrigger>
-        <TooltipContent>{meta.label}</TooltipContent>
+        <TooltipContent className="font-bold">{tooltipText}</TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );

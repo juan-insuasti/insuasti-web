@@ -62,14 +62,8 @@ export function ProjectFilters({ allTech, currentTechCsv, currentSearch }: Proje
         <h3 className="text-sm font-medium text-foreground">Filter by tech:</h3>
         <div className="flex flex-wrap gap-2">
           {allTech.map((t) => {
-            const active = selectedTech.includes(t);
             return (
-              <button
-                key={t}
-                type="button"
-                onClick={() => toggleTech(t)}
-                className={`transition-all ${active ? '' : ''}`}
-              >
+              <button key={t} type="button" onClick={() => toggleTech(t)}>
                 <TechBadge tech={t} withLabel />
               </button>
             );

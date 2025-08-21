@@ -140,20 +140,17 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
               {project.tech.slice(0, MAX_TECH_VISIBLE).map((tech, index) => (
                 <div
                   key={tech}
-                  className="transform transition-all duration-300 hover:scale-105"
+                  className="transform transition-all duration-300"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <TechBadge
-                    tech={tech}
-                    className="border-muted-foreground/20 bg-muted/50 transition-all duration-300 hover:border-primary/30 hover:bg-primary/10"
-                  />
+                  <TechBadge tech={tech} />
                 </div>
               ))}
               {hiddenTech.length > 0 && (
                 <TechBadge
                   tech={`+${hiddenTech.length} more`}
-                  withLabel={true}
                   className="border-dashed bg-muted/30"
+                  tooltipTechList={hiddenTech}
                 />
               )}
             </div>
@@ -166,7 +163,7 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
                 href={project.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/btn inline-flex items-center gap-2 rounded-lg border border-muted-foreground/20 bg-muted/50 px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+                className="group/btn inline-flex items-center gap-2 rounded-lg border border-muted-foreground/20 bg-muted/50 px-4 py-2 text-sm font-medium transition-all duration-300 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
                 aria-label={`Repository for ${project.title}`}
               >
                 <Github className="h-4 w-4 transition-transform duration-300 group-hover/btn:rotate-12" />
@@ -178,7 +175,7 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/btn inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 hover:from-primary/20 hover:to-primary/10 hover:text-primary"
+                className="group/btn inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 text-sm font-medium transition-all duration-300 hover:from-primary/20 hover:to-primary/10 hover:text-primary"
                 aria-label={`Live demo for ${project.title}`}
               >
                 <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />

@@ -72,7 +72,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <TechBadge key={t} tech={t} />
             ))}
             {hiddenTech.length > 0 && (
-              <TechBadge tech={`+${hiddenTech.length} more`} withLabel={true} />
+              <TechBadge
+                tech={`+${hiddenTech.length} more`}
+                withLabel={true}
+                tooltipTechList={hiddenTech}
+              />
             )}
           </div>
           <div className="mt-auto flex flex-wrap gap-3 pt-6">
