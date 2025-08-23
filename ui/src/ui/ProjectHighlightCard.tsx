@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ExternalLink, Github, Calendar, Zap } from 'lucide-react';
+import { ExternalLink, Calendar, Zap } from 'lucide-react';
 import { ProjectMeta } from '@/lib/project-types';
 import { TechBadge } from './TechBadge';
 import { formatDate } from '@/lib/markdown-utils';
 import { cn } from '@/lib/utils';
+import { SimpIcon } from './SimpIcon';
+import { siGithub } from 'simple-icons';
+import { Button } from '@/components/Button';
 
 export interface ProjectHighlightCardProps {
   project: ProjectMeta;
@@ -55,10 +58,7 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
   const status = statusConfig[project.status];
 
   return (
-    <article className="group relative overflow-hidden rounded-xl border bg-card text-card-foreground shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
+    <article className="group relative overflow-hidden rounded-xl border bg-card text-card-foreground shadow-lg transition-shadow duration-500 hover:shadow-2xl hover:shadow-primary/10">
       {/* Main content */}
       <div className="relative">
         {/* Image section with overlay effects */}
@@ -104,7 +104,7 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
         <div className="space-y-4 p-6">
           {/* Header */}
           <div className="space-y-2">
-            <h3 className="text-xl font-bold leading-tight tracking-tight text-foreground transition-colors duration-300 md:text-2xl">
+            <h3 className="text-xl font-bold leading-tight tracking-tight text-foreground md:text-2xl">
               {project.title}
             </h3>
             <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
@@ -137,14 +137,8 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
               Tech Stack
             </h4>
             <div className="flex flex-wrap gap-2">
-              {project.tech.slice(0, MAX_TECH_VISIBLE).map((tech, index) => (
-                <div
-                  key={tech}
-                  className="transform transition-all duration-300"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <TechBadge tech={tech} />
-                </div>
+              {project.tech.slice(0, MAX_TECH_VISIBLE).map((tech) => (
+                <TechBadge tech={tech} key={tech} />
               ))}
               {hiddenTech.length > 0 && (
                 <TechBadge
@@ -159,28 +153,33 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
           {/* Action buttons with enhanced styling */}
           <div className="flex flex-wrap gap-2 pt-2">
             {project.repoUrl && (
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/btn inline-flex items-center gap-2 rounded-lg border border-muted-foreground/20 bg-muted/50 px-4 py-2 text-sm font-medium transition-all duration-300 hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
-                aria-label={`Repository for ${project.title}`}
-              >
-                <Github className="h-4 w-4 transition-transform duration-300 group-hover/btn:rotate-12" />
-                Repository
-              </a>
+              <Button asChild>
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Repository for ${project.title}`}
+                >
+                  <SimpIcon
+                    className="h-4 w-4 transition-transform duration-300 group-hover/btn:rotate-12"
+                    icon={siGithub}
+                  />
+                  Repository
+                </a>
+              </Button>
             )}
             {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/btn inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 text-sm font-medium transition-all duration-300 hover:from-primary/20 hover:to-primary/10 hover:text-primary"
-                aria-label={`Live demo for ${project.title}`}
-              >
-                <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
-                Live Demo
-              </a>
+              <Button asChild>
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Live demo for ${project.title}`}
+                >
+                  <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:rotate-12" />
+                  Live Demo
+                </a>
+              </Button>
             )}
           </div>
         </div>

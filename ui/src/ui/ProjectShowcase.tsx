@@ -4,6 +4,7 @@ import { ProjectHighlightCarousel } from './ProjectHighlightCarousel';
 import { Typography } from './Typography';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { SectionFullPage } from './SectionFullPage';
+import { Button } from '@/components/Button';
 
 export async function ProjectShowcase() {
   const highlightedProjects = getHighlightedProjects(5); // Get up to 5 highlighted projects
@@ -57,22 +58,15 @@ export async function ProjectShowcase() {
 
         {/* Call to Action with Enhanced Styling */}
         <div className="mt-16 text-center">
-          <div className="relative inline-block">
-            {/* Glow effect behind button */}
-            <div className="absolute inset-0 animate-pulse rounded-lg bg-gradient-to-r from-primary/50 to-primary/30 blur-md"></div>
-
-            <Link
-              href="/projects"
-              className="group relative inline-flex items-center gap-3 rounded-lg border-2 border-transparent bg-gradient-to-r from-primary to-primary/90 px-8 py-4 font-semibold text-foreground transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/25"
-            >
+          <Button asChild variant="ghost" size="lg">
+            <Link href="/projects">
               <span>Explore All Projects</span>
-              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-
+              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               {/* Animated sparkle elements */}
               <div className="absolute -right-1 -top-1 h-2 w-2 animate-ping rounded-full bg-black duration-2000 dark:bg-white/80"></div>
               <div className="absolute -bottom-1 -left-1 h-1.5 w-1.5 animate-ping rounded-full bg-black delay-700 duration-3000 dark:bg-white/60"></div>
             </Link>
-          </div>
+          </Button>
         </div>
       </div>
     </SectionFullPage>

@@ -4,6 +4,7 @@ import { BlogPostCard } from './BlogPostCard';
 import { Typography } from './Typography';
 import { ArrowRight } from 'lucide-react';
 import { SectionFullPage } from './SectionFullPage';
+import { Button } from '@/components/Button';
 
 export async function BlogShowcase() {
   const latestPost = getLatestPost();
@@ -64,14 +65,13 @@ export async function BlogShowcase() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 rounded-lg border-2 border-transparent bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:border-primary hover:bg-primary/90 hover:text-foreground"
-          >
-            Explore All Posts
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+        <div className="mt-16 text-center">
+          <Button asChild variant="ghost" size="lg">
+            <Link href="/blog">
+              <span>Explore All Posts</span>
+              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </div>
       </div>
       {/* </section> */}
