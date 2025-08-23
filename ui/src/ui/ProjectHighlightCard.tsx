@@ -104,7 +104,7 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
         <div className="space-y-4 p-6">
           {/* Header */}
           <div className="space-y-2">
-            <h3 className="text-xl font-bold leading-tight tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary md:text-2xl">
+            <h3 className="text-xl font-bold leading-tight tracking-tight text-foreground transition-colors duration-300 md:text-2xl">
               {project.title}
             </h3>
             <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
