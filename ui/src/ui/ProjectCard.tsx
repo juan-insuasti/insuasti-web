@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { ProjectMeta } from '@/lib/project-types';
 import { TechBadge } from './TechBadge';
 import { formatDate } from '@/lib/markdown-utils';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/Button';
+import { siGithub } from 'simple-icons';
+import { SimpIcon } from './SimpIcon';
 
 export interface ProjectCardProps {
   project: ProjectMeta;
@@ -25,7 +28,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const MAX_TECH_VISIBLE = 5;
   const hiddenTech = project.tech.slice(MAX_TECH_VISIBLE);
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md">
+    <article className="group relative flex flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-shadow hover:shadow-md">
       <div className="flex flex-col gap-4 md:flex-row">
         <div className="relative aspect-video w-full overflow-hidden md:w-1/3">
           <Image
@@ -81,26 +84,33 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
           <div className="mt-auto flex flex-wrap gap-3 pt-6">
             {project.repoUrl && (
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-md border px-3 py-1.5 text-sm font-medium hover:bg-muted"
-                aria-label={`Repository for ${project.title}`}
-              >
-                <Github className="h-4 w-4" /> Repo
-              </a>
+              <Button asChild>
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Repository for ${project.title}`}
+                >
+                  <SimpIcon
+                    className="h-4 w-4 transition-transform duration-300 group-hover/btn:rotate-12"
+                    icon={siGithub}
+                  />{' '}
+                  Repository
+                </a>
+              </Button>
             )}
             {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-md border px-3 py-1.5 text-sm font-medium hover:bg-muted"
-                aria-label={`Live demo for ${project.title}`}
-              >
-                <ExternalLink className="h-4 w-4" /> Demo
-              </a>
+              <Button asChild>
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Live demo for ${project.title}`}
+                >
+                  <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:rotate-12" />{' '}
+                  Live Demo
+                </a>
+              </Button>
             )}
             {project.blogSlug && (
               <Link

@@ -65,7 +65,7 @@ export function TechBadge({ tech, className, withLabel = true, tooltipTechList }
   const badge = (
     <span
       className={cn(
-        'inline-flex items-center gap-1 rounded-md border border-muted-foreground/20 bg-muted/50 px-2 py-1 text-xs font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-primary/10',
+        'inline-flex items-center gap-1 rounded-md border border-muted-foreground/20 bg-muted/50 px-2 py-1 text-xs font-medium text-foreground hover:border-primary/30 hover:bg-primary/10',
         className,
       )}
     >
