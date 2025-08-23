@@ -2,15 +2,9 @@ import { NavBar } from '@/ui/navbar/NavBar';
 import { Typography } from '@/ui/Typography';
 import { Suspense } from 'react';
 import { ProjectSearchParams } from '@/lib/project-types';
-import {
-  getPaginatedProjects,
-  getAllTech,
-  getHighlightedProjects,
-  getAllProjects,
-} from '@/lib/project-utils';
+import { getPaginatedProjects, getAllTech, getAllProjects } from '@/lib/project-utils';
 import { ProjectCard } from '@/ui/ProjectCard';
 import { ProjectFilters } from '@/ui/ProjectFilters';
-import { ProjectHighlightCarousel } from '@/ui/ProjectHighlightCarousel';
 import { BlogPagination } from '@/ui/BlogPagination';
 import type { PaginatedBlogPosts } from '@/lib/blog-types';
 import Link from 'next/link';
@@ -48,7 +42,6 @@ async function ProjectsPageContent({ searchParams }: ProjectsPageProps) {
   const techCsv = awaited.tech;
   const search = awaited.search;
 
-  const highlighted = getHighlightedProjects(3);
   const paginated = getPaginatedProjects(page, techCsv, search);
   const allTech = getAllTech();
 
@@ -73,7 +66,6 @@ async function ProjectsPageContent({ searchParams }: ProjectsPageProps) {
 
   return (
     <>
-      <ProjectHighlightCarousel projects={highlighted} />
       <ProjectFilters allTech={allTech} currentTechCsv={techCsv} currentSearch={search} />
       <div className="flex flex-col gap-6">
         {paginated.projects.map((p) => (
