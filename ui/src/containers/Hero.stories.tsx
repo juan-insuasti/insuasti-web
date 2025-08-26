@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Hero } from '@/ui/Hero';
+import { Hero } from '@/containers/Hero';
 import { withTheme } from '@/lib/storybook-utils';
 
 export default {
