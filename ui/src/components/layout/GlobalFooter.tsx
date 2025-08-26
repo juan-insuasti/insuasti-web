@@ -1,8 +1,8 @@
 import React from 'react';
-import { Typography } from '@/containers/Typography';
+import { Typography } from '@/components/ui/Typography';
 
 import '@/app/globals.css';
-import { LogoIcon } from '../components/customIcons/LogoIcon';
+import { LogoIcon } from '../ui/customIcons/LogoIcon';
 
 export const GlobalFooter = () => {
   return (

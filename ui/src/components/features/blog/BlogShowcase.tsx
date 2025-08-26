@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { getLatestPost, getHighlightedPost } from '@/lib/blog-utils';
 import { BlogPostCard } from './BlogPostCard';
-import { Typography } from './Typography';
+import { Typography } from '../../ui/Typography';
 import { ArrowRight } from 'lucide-react';
-import { SectionFullPage } from '../components/SectionFullPage';
-import { Button } from '@/components/Button';
+import { SectionFullPage } from '../../layout/SectionFullPage';
+import { Button } from '@/components/ui/Button';
 
 export async function BlogShowcase() {
   const latestPost = getLatestPost();

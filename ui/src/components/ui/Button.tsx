@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { ButtonProps, Button as ShadButton } from './ui/button';
+import { ButtonProps, Button as ShadButton } from './button';
 import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 

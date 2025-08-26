@@ -1,13 +1,13 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { NavBar } from '@/containers/navbar/NavBar';
-import { BlogPostContent } from '@/containers/BlogPostContent';
-import { BlogPostCard } from '@/containers/BlogPostCard';
-import { Typography } from '@/containers/Typography';
+import { NavBar } from '@/components/layout/navbar/NavBar';
+import { BlogPostContent } from '@/components/lockups/blog/BlogPostContent';
+import { BlogPostCard } from '@/components/lockups/blog/BlogPostCard';
+import { Typography } from '@/components/ui/Typography';
 import { getPostBySlug, getRelatedPosts, getAllPosts } from '@/lib/blog-utils';
 import { renderMarkdown } from '@/lib/markdown-utils';
-import { JsonLd } from '@/components/JsonLd';
+import { JsonLd } from '@/components/ui/JsonLd';
 import { blogPostJsonLd } from '@/lib/jsonld';
 
 interface BlogPostPageProps {

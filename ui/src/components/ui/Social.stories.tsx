@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SocialLinks } from '@/containers/SocialLinks';
+import { SocialLinks } from '@/components/ui/SocialLinks';
 import { SOCIAL_LINKS } from '@/lib/consts';
 import { withTheme } from '@/lib/storybook-utils';
 

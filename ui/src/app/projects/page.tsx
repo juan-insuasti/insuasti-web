@@ -1,14 +1,14 @@
-import { NavBar } from '@/containers/navbar/NavBar';
-import { Typography } from '@/containers/Typography';
+import { NavBar } from '@/components/layout/navbar/NavBar';
+import { Typography } from '@/components/ui/Typography';
 import { Suspense } from 'react';
 import { ProjectSearchParams } from '@/lib/project-types';
 import { getPaginatedProjects, getAllTech, getAllProjects } from '@/lib/project-utils';
-import { ProjectCard } from '@/containers/ProjectCard';
-import { ProjectFilters } from '@/containers/ProjectFilters';
-import { BlogPagination } from '@/containers/BlogPagination';
+import { ProjectCard } from '@/components/lockups/projects/ProjectCard';
+import { ProjectFilters } from '@/components/lockups/projects/ProjectFilters';
+import { BlogPagination } from '@/components/lockups/blog/BlogPagination';
 import type { PaginatedBlogPosts } from '@/lib/blog-types';
 import Link from 'next/link';
-import { JsonLd } from '@/components/JsonLd';
+import { JsonLd } from '@/components/ui/JsonLd';
 import { projectsPageJsonLd } from '@/lib/jsonld';
 
 import type { Metadata } from 'next';

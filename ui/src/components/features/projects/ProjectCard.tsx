@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import { ProjectMeta } from '@/lib/project-types';
-import { TechBadge } from '../components/TechBadge';
+import { TechBadge } from '../../ui/TechBadge';
 import { formatDate } from '@/lib/markdown-utils';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/Button';
+import { Button } from '@/components/ui/Button';
 import { siGithub } from 'simple-icons';
-import { SimpIcon } from '../components/SimpIcon';
+import { SimpIcon } from '../../ui/SimpIcon';
 
 export interface ProjectCardProps {
   project: ProjectMeta;
