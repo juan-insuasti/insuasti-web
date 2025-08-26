@@ -1,5 +1,5 @@
-import { SectionFullPage } from '@/ui/SectionFullPage';
-import { Typography } from '@/ui/Typography';
+import { SectionFullPage } from '@/containers/SectionFullPage';
+import { Typography } from '@/containers/Typography';
 import Image from 'next/image';
 import React from 'react';
 
@@ -28,10 +28,10 @@ export const About: React.FC = () => {
           </Typography>
           <div className="mt-6 grid w-full grid-cols-1 gap-4 md:grid-cols-2">
             <div>
-              <Typography as="h3" variant="h3" className='text-primary'>
+              <Typography as="h3" variant="h3" className="text-primary">
                 Skills & Tech
               </Typography>
-              <ul className="mt-1 md:mt-2 lg:mt-4 text-muted-foreground">
+              <ul className="mt-1 text-muted-foreground md:mt-2 lg:mt-4">
                 <li>React & TypeScript</li>
                 <li>Next.js / Remix</li>
                 <li>GraphQL & REST</li>
@@ -39,10 +39,10 @@ export const About: React.FC = () => {
               </ul>
             </div>
             <div>
-              <Typography as="h3" variant="h3" className='text-primary'>
+              <Typography as="h3" variant="h3" className="text-primary">
                 Soft Skills
               </Typography>
-              <ul className="mt-1 md:mt-2 lg:mt-4 text-muted-foreground">
+              <ul className="mt-1 text-muted-foreground md:mt-2 lg:mt-4">
                 <li>Problem-Solving</li>
                 <li>Adaptability</li>
                 <li>Collaboration</li>
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
               </ul>
             </div>
           </div>
-          <Typography as="h3" variant="h3" className="mt-6 text-primary mb-4">
+          <Typography as="h3" variant="h3" className="mb-4 mt-6 text-primary">
             Current Focus
           </Typography>
           <Typography as="p" variant="p">

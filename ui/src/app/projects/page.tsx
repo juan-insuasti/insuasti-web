@@ -1,11 +1,11 @@
-import { NavBar } from '@/ui/navbar/NavBar';
-import { Typography } from '@/ui/Typography';
+import { NavBar } from '@/containers/navbar/NavBar';
+import { Typography } from '@/containers/Typography';
 import { Suspense } from 'react';
 import { ProjectSearchParams } from '@/lib/project-types';
 import { getPaginatedProjects, getAllTech, getAllProjects } from '@/lib/project-utils';
-import { ProjectCard } from '@/ui/ProjectCard';
-import { ProjectFilters } from '@/ui/ProjectFilters';
-import { BlogPagination } from '@/ui/BlogPagination';
+import { ProjectCard } from '@/containers/ProjectCard';
+import { ProjectFilters } from '@/containers/ProjectFilters';
+import { BlogPagination } from '@/containers/BlogPagination';
 import type { PaginatedBlogPosts } from '@/lib/blog-types';
 import Link from 'next/link';
 import { JsonLd } from '@/components/JsonLd';
@@ -86,7 +86,7 @@ export default function ProjectsPage({ searchParams }: ProjectsPageProps) {
     <>
       <JsonLd data={projectsPageJsonLd(allProjects)} />
       <NavBar />
-      <div className="min-h-screen pb-28 pt-20">
+      <div className="py-20">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <header className="mb-12 mt-8 text-center">
             <Typography as="h1" variant="h1" className="mb-4">
