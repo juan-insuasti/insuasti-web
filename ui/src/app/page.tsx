@@ -1,10 +1,10 @@
-import { Hero } from '@/ui/Hero';
+import { Hero } from '@/containers/Hero';
 import { About } from './(homepage)/about';
 import { SOCIAL_LINKS } from '@/lib/consts';
-import { SocialLinks } from '@/ui/SocialLinks';
-import { NavBar } from '@/ui/navbar/NavBar';
-import { BlogShowcase } from '@/ui/BlogShowcase';
-import { ProjectShowcase } from '@/ui/ProjectShowcase';
+import { SocialLinks } from '@/containers/SocialLinks';
+import { NavBar } from '@/containers/navbar/NavBar';
+import { BlogShowcase } from '@/containers/BlogShowcase';
+import { ProjectShowcase } from '@/containers/ProjectShowcase';
 import { JsonLd } from '@/components/JsonLd';
 import { homepageJsonLd } from '@/lib/jsonld';
 

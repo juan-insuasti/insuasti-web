@@ -1,8 +1,8 @@
-import { NavBar } from '@/ui/navbar/NavBar';
-import { Typography } from '@/ui/Typography';
-import { BlogPostCard } from '@/ui/BlogPostCard';
-import { BlogFilters } from '@/ui/BlogFilters';
-import { BlogPagination } from '@/ui/BlogPagination';
+import { NavBar } from '@/containers/navbar/NavBar';
+import { Typography } from '@/containers/Typography';
+import { BlogPostCard } from '@/containers/BlogPostCard';
+import { BlogFilters } from '@/containers/BlogFilters';
+import { BlogPagination } from '@/containers/BlogPagination';
 import { getPaginatedPosts, getAllTags } from '@/lib/blog-utils';
 import { BlogSearchParams } from '@/lib/blog-types';
 import { Suspense } from 'react';
@@ -100,7 +100,7 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
     <>
       <JsonLd data={blogPageJsonLd()} />
       <NavBar />
-      <div className="min-h-screen pb-28 pt-20">
+      <div className="pb-12 pt-20">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <header className="mb-12 mt-8 text-center">
             <Typography as="h1" variant="h1" className="mb-4">

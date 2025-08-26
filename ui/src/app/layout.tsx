@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { fira, inter, fjallaOne } from '@/lib/fonts';
-import { GlobalFooter } from '@/ui/GlobalFooter';
+import { GlobalFooter } from '@/containers/GlobalFooter';
 
 export const metadata: Metadata = {
   title: 'insuasti.com | Juan Insuasti - Senior Frontend Developer',
@@ -55,10 +55,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          <>
-            {children}
+          <div className="flex min-h-screen flex-col justify-between">
+            <main>{children}</main>
             <GlobalFooter />
-          </>
+          </div>
         </ThemeProvider>
         <Analytics />
       </body>
