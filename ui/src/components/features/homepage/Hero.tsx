@@ -1,6 +1,6 @@
 import React from 'react';
-import { SectionFullPage } from '@/components/SectionFullPage';
-import { Typography } from '@/containers/Typography';
+import { SectionFullPage } from '@/components/layout/SectionFullPage';
+import { Typography } from '@/components/ui/Typography';
 
 import '@/app/globals.css';
 

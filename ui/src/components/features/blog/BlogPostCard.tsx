@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { BlogPostMeta } from '@/lib/blog-types';
 import { formatDate } from '@/lib/markdown-utils';
-import { Typography } from './Typography';
+import { Typography } from '../../ui/Typography';
 import { Badge } from '@/components/ui/badge';
 
 interface BlogPostCardProps {

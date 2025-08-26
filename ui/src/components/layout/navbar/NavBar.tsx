@@ -3,9 +3,9 @@ import React, { JSX } from 'react';
 import { MobileNavBar } from './MobileNavBar';
 import { DesktopNavBar } from './DesktopNavBar';
 import Link from 'next/link';
-import { Typography } from '../Typography';
-import { ThemeMenu } from '../ThemeMenu';
-import { LogoIcon } from '../../components/customIcons/LogoIcon';
+import { Typography } from '../../ui/Typography';
+import { ThemeMenu } from '../../ui/ThemeMenu';
+import { LogoIcon } from '../../ui/customIcons/LogoIcon';
 
 export type NavItem = {
   title: string;

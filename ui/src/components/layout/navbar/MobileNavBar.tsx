@@ -7,8 +7,8 @@ import { SquareMenu } from 'lucide-react';
 
 import type { NavItem } from './NavBar';
 import Link from 'next/link';
-import { Typography } from '../Typography';
-import { ThemeMenu } from '../ThemeMenu';
+import { Typography } from '../../ui/Typography';
+import { ThemeMenu } from '../../ui/ThemeMenu';
 
 type MobileNavBarProps = {
   navItems: Array<NavItem>;

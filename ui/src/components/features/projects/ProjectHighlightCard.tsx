@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink, Calendar, Zap } from 'lucide-react';
 import { ProjectMeta } from '@/lib/project-types';
-import { TechBadge } from '../components/TechBadge';
+import { TechBadge } from '../../ui/TechBadge';
 import { formatDate } from '@/lib/markdown-utils';
 import { cn } from '@/lib/utils';
-import { SimpIcon } from '../components/SimpIcon';
+import { SimpIcon } from '../../ui/SimpIcon';
 import { siGithub } from 'simple-icons';
-import { Button } from '@/components/Button';
+import { Button } from '@/components/ui/Button';
 
 export interface ProjectHighlightCardProps {
   project: ProjectMeta;

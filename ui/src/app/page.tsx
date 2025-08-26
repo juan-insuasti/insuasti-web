@@ -1,11 +1,11 @@
-import { Hero } from '@/containers/Hero';
-import { About } from './(homepage)/about';
+import { Hero } from '@/components/lockups/homepage/Hero';
+import { About } from '../components/lockups/homepage/About';
 import { SOCIAL_LINKS } from '@/lib/consts';
-import { SocialLinks } from '@/containers/SocialLinks';
-import { NavBar } from '@/containers/navbar/NavBar';
-import { BlogShowcase } from '@/containers/BlogShowcase';
-import { ProjectShowcase } from '@/containers/ProjectShowcase';
-import { JsonLd } from '@/components/JsonLd';
+import { SocialLinks } from '@/components/ui/SocialLinks';
+import { NavBar } from '@/components/layout/navbar/NavBar';
+import { BlogShowcase } from '@/components/lockups/blog/BlogShowcase';
+import { ProjectShowcase } from '@/components/lockups/projects/ProjectShowcase';
+import { JsonLd } from '@/components/ui/JsonLd';
 import { homepageJsonLd } from '@/lib/jsonld';
 
 export default function Home() {
