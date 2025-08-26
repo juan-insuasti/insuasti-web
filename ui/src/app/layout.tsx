@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
+
 import { Analytics } from '@vercel/analytics/next';
 
 import './globals.css';
-import { ThemeProvider } from '@/components/ui/ThemeProvider';
-import { fira, inter, fjallaOne } from '@/lib/fonts';
-import { GlobalFooter } from '@/components/layout/GlobalFooter';
+
+import { GlobalFooter } from '@layout/GlobalFooter';
+import { ThemeProvider } from '@ui/ThemeProvider';
+
+import { fira, fjallaOne, inter } from '@lib/fonts';
 
 export const metadata: Metadata = {
   title: 'insuasti.com | Juan Insuasti - Senior Frontend Developer',

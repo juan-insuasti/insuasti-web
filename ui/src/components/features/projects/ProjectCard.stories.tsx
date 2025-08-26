@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ProjectCard } from './ProjectCard';
-import { ProjectMeta } from '@/lib/project-types';
+
+import { ProjectCard } from '@features/projects/ProjectCard';
+
+import { ProjectMeta } from '@lib/project-types';
 
 const meta: Meta<typeof ProjectCard> = {
   title: 'Projects/ProjectCard',

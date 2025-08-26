@@ -1,13 +1,16 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import { ExternalLink } from 'lucide-react';
-import { ProjectMeta } from '@/lib/project-types';
-import { TechBadge } from '../../ui/TechBadge';
-import { formatDate } from '@/lib/markdown-utils';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/Button';
 import { siGithub } from 'simple-icons';
-import { SimpIcon } from '../../ui/SimpIcon';
+
+import { Button } from '@ui/Button';
+import { SimpIcon } from '@ui/SimpIcon';
+import { TechBadge } from '@ui/TechBadge';
+
+import { formatDate } from '@lib/markdown-utils';
+import { ProjectMeta } from '@lib/project-types';
+import { cn } from '@lib/utils';
 
 export interface ProjectCardProps {
   project: ProjectMeta;

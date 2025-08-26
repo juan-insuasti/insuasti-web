@@ -1,8 +1,9 @@
 import React from 'react';
+
 import type { Preview } from '@storybook/react';
 
-import { fira, inter, fjallaOne } from '../src/lib/fonts';
-import { ThemeProvider } from '../src/components/theme-provider';
+import { ThemeProvider } from '../src/components/ui/ThemeProvider';
+import { fira, fjallaOne, inter } from '../src/lib/fonts';
 
 import '@/app/globals.css';
 import './storybook.css';

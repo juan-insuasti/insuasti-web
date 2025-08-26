@@ -1,16 +1,19 @@
 'use client';
-import { ProjectMeta } from '@/lib/project-types';
-import { ProjectHighlightCard } from './ProjectHighlightCard';
+
 import React from 'react';
+
+import { ProjectHighlightCard } from '@features/projects/ProjectHighlightCard';
 import {
   Carousel,
-  type CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
-import { cn } from '@/lib/utils';
+  type CarouselApi,
+} from '@ui/carousel';
+
+import { ProjectMeta } from '@lib/project-types';
+import { cn } from '@lib/utils';
 
 export interface ProjectHighlightCarouselProps {
   projects: ProjectMeta[];

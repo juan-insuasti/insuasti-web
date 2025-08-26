@@ -1,6 +1,4 @@
-import { Fira_Code } from 'next/font/google';
-import { Inter } from 'next/font/google';
-import { Fjalla_One } from 'next/font/google';
+import { Fira_Code, Fjalla_One, Inter } from 'next/font/google';
 
 export const fira = Fira_Code({
   weight: '400',

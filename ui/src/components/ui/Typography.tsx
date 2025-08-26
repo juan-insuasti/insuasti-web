@@ -1,5 +1,6 @@
+import { FC, JSX } from 'react';
+
 import clsx from 'clsx';
-import { JSX, FC } from 'react';
 
 type TTypographyVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'small';
 

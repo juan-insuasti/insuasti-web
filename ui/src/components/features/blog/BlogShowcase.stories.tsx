@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BlogPostCard } from './BlogPostCard';
-import { BlogFilters } from './BlogFilters';
-import { BlogPagination } from './BlogPagination';
-import { Typography } from '../../ui/Typography';
-import { BlogPostMeta, PaginatedBlogPosts } from '@/lib/blog-types';
+
+import { BlogFilters } from '@features/blog/BlogFilters';
+import { BlogPostCard } from '@features/blog/BlogPostCard';
+import { Pagination } from '@ui/Pagination';
+import { Typography } from '@ui/Typography';
+
+import { BlogPostMeta, PaginatedBlogPosts } from '@lib/blog-types';
 
 const meta: Meta = {
   title: 'Pages/Blog Showcase',
@@ -136,7 +138,7 @@ export const BlogPage: Story = {
         </div>
 
         {/* Pagination */}
-        <BlogPagination paginatedData={paginatedData} />
+        <Pagination paginatedData={paginatedData} />
       </div>
     </div>
   ),
@@ -165,7 +167,7 @@ export const BlogPageWithFilters: Story = {
         </div>
 
         {/* Pagination for filtered results */}
-        <BlogPagination
+        <Pagination
           paginatedData={{
             posts: [samplePosts[1]],
             pagination: {

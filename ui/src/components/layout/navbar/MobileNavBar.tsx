@@ -1,14 +1,17 @@
 'use client';
-import { JSX, useState } from 'react';
 
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
+import { JSX, useState } from 'react';
+import Link from 'next/link';
+
 import { SquareMenu } from 'lucide-react';
 
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@ui/sheet';
+import { ThemeMenu } from '@ui/ThemeMenu';
+import { Typography } from '@ui/Typography';
+
+import { Button } from '@/components/ui/shad-button';
+
 import type { NavItem } from './NavBar';
-import Link from 'next/link';
-import { Typography } from '../../ui/Typography';
-import { ThemeMenu } from '../../ui/ThemeMenu';
 
 type MobileNavBarProps = {
   navItems: Array<NavItem>;

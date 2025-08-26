@@ -1,7 +1,9 @@
 import React from 'react';
-import { SectionFullPage } from '@/components/layout/SectionFullPage';
-import { Typography } from '@/components/ui/Typography';
 
+import { SectionFullPage } from '@containers/SectionFullPage';
+import { Typography } from '@ui/Typography';
+
+//TODO: Is this needed?
 import '@/app/globals.css';
 
 interface HeroProps {

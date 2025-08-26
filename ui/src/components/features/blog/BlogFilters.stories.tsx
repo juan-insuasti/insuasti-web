@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BlogFilters } from './BlogFilters';
+
+import { BlogFilters } from '@features/blog/BlogFilters';
 
 const meta: Meta<typeof BlogFilters> = {
   title: 'Blog/Filters',

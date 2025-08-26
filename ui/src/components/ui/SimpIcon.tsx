@@ -1,9 +1,11 @@
 'use client';
 
 import { JSX } from 'react';
+
 import { SimpleIcon } from 'simple-icons';
 
-import { cn } from '@/lib/utils'; // Assuming you have a cn utility for class merging
+import { cn } from '@lib/utils'; // Assuming you have a cn utility for class merging
+
 interface IconProps extends Omit<React.SVGProps<SVGSVGElement>, 'children'> {
   icon: SimpleIcon;
   size?: number | string;

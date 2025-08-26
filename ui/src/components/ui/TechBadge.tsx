@@ -1,7 +1,5 @@
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { cn } from '@/lib/utils';
 import React from 'react';
-import { SimpIcon } from './SimpIcon';
+
 import {
   siCss,
   siEsphome,
@@ -21,6 +19,11 @@ import {
   siTypescript,
   siVercel,
 } from 'simple-icons';
+
+import { cn } from '@/lib/utils';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
+import { SimpIcon } from './SimpIcon';
 
 export interface TechBadgeProps {
   tech: string;

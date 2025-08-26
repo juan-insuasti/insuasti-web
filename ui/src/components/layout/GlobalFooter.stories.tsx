@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { withTheme } from '@/lib/storybook-utils';
-import { GlobalFooter } from './GlobalFooter';
+import { GlobalFooter } from '@layout/GlobalFooter';
+
+import { withTheme } from '@lib/storybook-utils';
 
 export default {
   component: GlobalFooter,

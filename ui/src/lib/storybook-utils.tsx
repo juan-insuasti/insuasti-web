@@ -1,5 +1,7 @@
-import { useTheme } from 'next-themes';
 import { JSX } from 'react';
+
+import { useTheme } from 'next-themes';
+
 // Decorators
 
 type Theme = 'light' | 'dark' | 'system';

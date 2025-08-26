@@ -1,7 +1,9 @@
-import Link from 'next/link';
 import { JSX } from 'react';
+import Link from 'next/link';
+
+import { Typography } from '@ui/Typography';
+
 import type { NavItem } from './NavBar';
-import { Typography } from '../../ui/Typography';
 
 type DesktopNavBarProps = {
   navItems: Array<NavItem>;

@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+
 import matter from 'gray-matter';
+
 import { BlogPost, BlogPostMeta, PaginatedBlogPosts } from './blog-types';
 
 const POSTS_PER_PAGE = 6;
@@ -201,12 +203,12 @@ export function getLatestPost(): BlogPostMeta | null {
 
 export function getHighlightedPost(): BlogPostMeta | null {
   const posts = getAllPosts();
-  const highlightedPosts = posts.filter(post => post.highlighted);
-  
+  const highlightedPosts = posts.filter((post) => post.highlighted);
+
   if (highlightedPosts.length === 0) {
     return null;
   }
-  
+
   // Return a random highlighted post
   const randomIndex = Math.floor(Math.random() * highlightedPosts.length);
   return highlightedPosts[randomIndex];

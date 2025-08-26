@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ProjectFilters, type ProjectFiltersProps } from './ProjectFilters';
+
+import { ProjectFilters, type ProjectFiltersProps } from '@features/projects/ProjectFilters';
 
 const meta: Meta<typeof ProjectFilters> = {
   title: 'Projects/ProjectFilters',
@@ -16,7 +17,7 @@ const meta: Meta<typeof ProjectFilters> = {
     docs: {
       description: {
         component:
-          'Interactive filters for searching and narrowing projects by technology. URL updates are simulated via Storybook\'s Next.js navigation parameter.',
+          "Interactive filters for searching and narrowing projects by technology. URL updates are simulated via Storybook's Next.js navigation parameter.",
       },
     },
   },

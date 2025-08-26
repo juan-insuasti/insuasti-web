@@ -1,5 +1,5 @@
-import linkedInIMG from '@public/social-linkedin.svg';
 import githubIMG from '@public/social-github.svg';
+import linkedInIMG from '@public/social-linkedin.svg';
 
 export const SOCIAL_LINKS = [
   {
