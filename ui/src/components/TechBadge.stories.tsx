@@ -8,7 +8,8 @@ const meta: Meta<typeof TechBadge> = {
     layout: 'padded',
     docs: {
       description: {
-        component: 'Technology badge displaying an icon (where available) and optional label with tooltip.',
+        component:
+          'Technology badge displaying an icon (where available) and optional label with tooltip.',
       },
     },
   },
@@ -64,7 +65,8 @@ export const UnknownTech: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Unknown technology falls back to simple label with first letter placeholder icon styling.',
+        story:
+          'Unknown technology falls back to simple label with first letter placeholder icon styling.',
       },
     },
   },
@@ -73,7 +75,18 @@ export const UnknownTech: Story = {
 export const Dense: Story = {
   render: () => (
     <div className="flex flex-wrap gap-1">
-      {['nextjs','react','typescript','tailwindcss','openai','vercel','node','css','esp32','iot'].map(t => (
+      {[
+        'nextjs',
+        'react',
+        'typescript',
+        'tailwindcss',
+        'openai',
+        'vercel',
+        'node',
+        'css',
+        'esp32',
+        'iot',
+      ].map((t) => (
         <TechBadge key={t} tech={t} withLabel={false} />
       ))}
     </div>

@@ -5,7 +5,7 @@ import { DesktopNavBar } from './DesktopNavBar';
 import Link from 'next/link';
 import { Typography } from '../Typography';
 import { ThemeMenu } from '../ThemeMenu';
-import { LogoIcon } from '../customIcons/LogoIcon';
+import { LogoIcon } from '../../components/customIcons/LogoIcon';
 
 export type NavItem = {
   title: string;

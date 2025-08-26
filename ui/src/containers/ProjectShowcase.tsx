@@ -3,7 +3,7 @@ import { getHighlightedProjects } from '@/lib/project-utils';
 import { ProjectHighlightCarousel } from './ProjectHighlightCarousel';
 import { Typography } from './Typography';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { SectionFullPage } from './SectionFullPage';
+import { SectionFullPage } from '../components/SectionFullPage';
 import { Button } from '@/components/Button';
 
 export async function ProjectShowcase() {
