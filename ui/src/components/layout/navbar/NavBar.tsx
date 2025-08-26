@@ -1,11 +1,12 @@
 import React, { JSX } from 'react';
-
-import { MobileNavBar } from './MobileNavBar';
-import { DesktopNavBar } from './DesktopNavBar';
 import Link from 'next/link';
-import { Typography } from '../../ui/Typography';
-import { ThemeMenu } from '../../ui/ThemeMenu';
-import { LogoIcon } from '../../ui/customIcons/LogoIcon';
+
+import { LogoIcon } from '@ui/customIcons/LogoIcon';
+import { ThemeMenu } from '@ui/ThemeMenu';
+import { Typography } from '@ui/Typography';
+
+import { DesktopNavBar } from './DesktopNavBar';
+import { MobileNavBar } from './MobileNavBar';
 
 export type NavItem = {
   title: string;

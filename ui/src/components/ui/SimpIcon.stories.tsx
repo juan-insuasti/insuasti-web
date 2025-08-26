@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { siGithub, siReact, siTailwindcss, siTypescript } from 'simple-icons';
+
 import { SimpIcon } from './SimpIcon';
-import { siGithub, siReact, siTypescript, siTailwindcss } from 'simple-icons';
 
 const meta: Meta<typeof SimpIcon> = {
   title: 'Components/Icon',

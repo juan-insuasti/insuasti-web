@@ -2,14 +2,16 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { PaginatedBlogPosts } from '@/lib/blog-types';
 
-interface BlogPaginationProps {
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+import { PaginatedBlogPosts } from '@lib/blog-types';
+
+interface PaginationProps {
   paginatedData: PaginatedBlogPosts;
 }
 
-export function BlogPagination({ paginatedData }: BlogPaginationProps) {
+export function Pagination({ paginatedData }: PaginationProps) {
   const searchParams = useSearchParams();
   const { pagination } = paginatedData;
 
@@ -69,11 +71,11 @@ export function BlogPagination({ paginatedData }: BlogPaginationProps) {
             Previous
           </Link>
         ) : (
-          <span className="relative inline-flex items-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-muted-foreground cursor-not-allowed">
+          <span className="relative inline-flex cursor-not-allowed items-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-muted-foreground">
             Previous
           </span>
         )}
-        
+
         {pagination.hasNextPage ? (
           <Link
             href={createPageUrl(pagination.currentPage + 1)}
@@ -82,7 +84,7 @@ export function BlogPagination({ paginatedData }: BlogPaginationProps) {
             Next
           </Link>
         ) : (
-          <span className="relative ml-3 inline-flex items-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-muted-foreground cursor-not-allowed">
+          <span className="relative ml-3 inline-flex cursor-not-allowed items-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-muted-foreground">
             Next
           </span>
         )}
@@ -102,9 +104,12 @@ export function BlogPagination({ paginatedData }: BlogPaginationProps) {
             of <span className="font-medium">{pagination.totalPosts}</span> results
           </p>
         </div>
-        
+
         <div>
-          <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+          <nav
+            className="isolate inline-flex -space-x-px rounded-md shadow-sm"
+            aria-label="Pagination"
+          >
             {/* Previous button */}
             {pagination.hasPrevPage ? (
               <Link
@@ -115,7 +120,7 @@ export function BlogPagination({ paginatedData }: BlogPaginationProps) {
                 <span className="sr-only">Previous</span>
               </Link>
             ) : (
-              <span className="relative inline-flex items-center rounded-l-md px-2 py-2 text-muted-foreground ring-1 ring-inset ring-border cursor-not-allowed">
+              <span className="relative inline-flex cursor-not-allowed items-center rounded-l-md px-2 py-2 text-muted-foreground ring-1 ring-inset ring-border">
                 <ChevronLeft className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Previous</span>
               </span>
@@ -162,7 +167,7 @@ export function BlogPagination({ paginatedData }: BlogPaginationProps) {
                 <span className="sr-only">Next</span>
               </Link>
             ) : (
-              <span className="relative inline-flex items-center rounded-r-md px-2 py-2 text-muted-foreground ring-1 ring-inset ring-border cursor-not-allowed">
+              <span className="relative inline-flex cursor-not-allowed items-center rounded-r-md px-2 py-2 text-muted-foreground ring-1 ring-inset ring-border">
                 <ChevronRight className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Next</span>
               </span>

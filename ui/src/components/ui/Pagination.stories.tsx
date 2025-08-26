@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BlogPagination } from './BlogPagination';
+
 import { PaginatedBlogPosts } from '@/lib/blog-types';
 
-const meta: Meta<typeof BlogPagination> = {
+import { Pagination } from './Pagination';
+
+const meta: Meta<typeof Pagination> = {
   title: 'Blog/Pagination',
-  component: BlogPagination,
+  component: Pagination,
   parameters: {
     layout: 'padded',
     nextjs: {
@@ -30,7 +32,7 @@ const createPaginatedData = (
   currentPage: number,
   totalPages: number,
   totalPosts: number,
-  postsPerPage: number = 6
+  postsPerPage: number = 6,
 ): PaginatedBlogPosts => ({
   posts: [], // We don't need actual posts for pagination component
   pagination: {

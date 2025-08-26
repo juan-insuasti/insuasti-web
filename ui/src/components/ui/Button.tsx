@@ -1,6 +1,9 @@
 import { JSX } from 'react';
-import { ButtonProps, Button as ShadButton } from './button';
+
 import { cva } from 'class-variance-authority';
+
+import { ButtonProps, Button as ShadButton } from '@ui/shad-button';
+
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(

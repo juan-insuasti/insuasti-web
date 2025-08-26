@@ -1,12 +1,13 @@
-import { Hero } from '@/components/lockups/homepage/Hero';
-import { About } from '../components/lockups/homepage/About';
+import { BlogShowcase } from '@features/blog/BlogShowcase';
+import { About } from '@features/homepage/About';
+import { Hero } from '@features/homepage/Hero';
+import { ProjectShowcase } from '@features/projects/ProjectShowcase';
+import { JsonLd } from '@ui/JsonLd';
+
 import { SOCIAL_LINKS } from '@/lib/consts';
+import { homepageJsonLd } from '@/lib/jsonld';
 import { SocialLinks } from '@/components/ui/SocialLinks';
 import { NavBar } from '@/components/layout/navbar/NavBar';
-import { BlogShowcase } from '@/components/lockups/blog/BlogShowcase';
-import { ProjectShowcase } from '@/components/lockups/projects/ProjectShowcase';
-import { JsonLd } from '@/components/ui/JsonLd';
-import { homepageJsonLd } from '@/lib/jsonld';
 
 export default function Home() {
   const HeroTitle = (

@@ -1,8 +1,11 @@
 'use client';
-import { useState, useEffect } from 'react';
+
+import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+
 import { Search, X } from 'lucide-react';
-import { TechBadge } from '../../ui/TechBadge';
+
+import { TechBadge } from '@ui/TechBadge';
 
 export interface ProjectFiltersProps {
   allTech: string[];

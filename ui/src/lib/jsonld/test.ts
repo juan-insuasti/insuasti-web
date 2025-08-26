@@ -3,9 +3,9 @@
  * Run this file to check if all schemas generate valid JSON
  */
 
-import { homepageJsonLd, blogPageJsonLd, blogPostJsonLd, projectsPageJsonLd } from './index';
 import type { BlogPost } from '../blog-types';
 import type { ProjectMeta } from '../project-types';
+import { blogPageJsonLd, blogPostJsonLd, homepageJsonLd, projectsPageJsonLd } from './index';
 
 // Mock data for testing
 const mockBlogPost: BlogPost = {

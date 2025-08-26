@@ -1,14 +1,17 @@
-import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
+
 import { ArrowLeft } from 'lucide-react';
-import { NavBar } from '@/components/layout/navbar/NavBar';
-import { BlogPostContent } from '@/components/lockups/blog/BlogPostContent';
-import { BlogPostCard } from '@/components/lockups/blog/BlogPostCard';
-import { Typography } from '@/components/ui/Typography';
-import { getPostBySlug, getRelatedPosts, getAllPosts } from '@/lib/blog-utils';
-import { renderMarkdown } from '@/lib/markdown-utils';
-import { JsonLd } from '@/components/ui/JsonLd';
-import { blogPostJsonLd } from '@/lib/jsonld';
+
+import { BlogPostCard } from '@features/blog/BlogPostCard';
+import { BlogPostContent } from '@features/blog/BlogPostContent';
+import { NavBar } from '@layout/navbar/NavBar';
+import { JsonLd } from '@ui/JsonLd';
+import { Typography } from '@ui/Typography';
+
+import { getAllPosts, getPostBySlug, getRelatedPosts } from '@lib/blog-utils';
+import { blogPostJsonLd } from '@lib/jsonld';
+import { renderMarkdown } from '@lib/markdown-utils';
 
 interface BlogPostPageProps {
   params: Promise<{

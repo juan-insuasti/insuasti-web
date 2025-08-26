@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BlogPostCard } from './BlogPostCard';
-import { BlogPostMeta } from '@/lib/blog-types';
+
+import { BlogPostCard } from '@features/blog/BlogPostCard';
+
+import { BlogPostMeta } from '@lib/blog-types';
 
 const meta: Meta<typeof BlogPostCard> = {
   title: 'Blog/PostCard',
@@ -24,7 +26,8 @@ const samplePost: BlogPostMeta = {
   title: 'Hello World: Starting My Blog Journey',
   date: '2025-01-15',
   author: 'Juan Insuasti',
-  excerpt: 'Welcome to my blog! This is the first post where I share my thoughts on frontend development and web technologies.',
+  excerpt:
+    'Welcome to my blog! This is the first post where I share my thoughts on frontend development and web technologies.',
   tags: ['introduction', 'frontend', 'blog'],
 };
 
@@ -33,7 +36,8 @@ const longPost: BlogPostMeta = {
   title: 'Building Performant React Applications with Advanced Optimization Techniques',
   date: '2025-01-10',
   author: 'Juan Insuasti',
-  excerpt: 'Learn essential techniques for optimizing React applications, from code splitting to memory management. This is a longer excerpt to demonstrate how the component handles more text content and how it truncates properly.',
+  excerpt:
+    'Learn essential techniques for optimizing React applications, from code splitting to memory management. This is a longer excerpt to demonstrate how the component handles more text content and how it truncates properly.',
   tags: ['react', 'performance', 'optimization', 'frontend', 'javascript', 'typescript'],
 };
 

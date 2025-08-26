@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ProjectHighlightCarousel } from './ProjectHighlightCarousel';
-import { ProjectMeta } from '@/lib/project-types';
+
+import { ProjectHighlightCarousel } from '@features/projects/ProjectHighlightCarousel';
+
+import { ProjectMeta } from '@lib/project-types';
 
 const meta: Meta<typeof ProjectHighlightCarousel> = {
   title: 'Projects/ProjectHighlightCarousel',

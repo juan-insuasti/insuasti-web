@@ -1,15 +1,16 @@
-import { NavBar } from '@/components/layout/navbar/NavBar';
-import { Typography } from '@/components/ui/Typography';
-import { BlogPostCard } from '@/components/lockups/blog/BlogPostCard';
-import { BlogFilters } from '@/components/lockups/blog/BlogFilters';
-import { BlogPagination } from '@/components/lockups/blog/BlogPagination';
-import { getPaginatedPosts, getAllTags } from '@/lib/blog-utils';
-import { BlogSearchParams } from '@/lib/blog-types';
 import { Suspense } from 'react';
-import { JsonLd } from '@/components/ui/JsonLd';
-import { blogPageJsonLd } from '@/lib/jsonld';
-
 import type { Metadata } from 'next';
+
+import { BlogFilters } from '@features/blog/BlogFilters';
+import { BlogPostCard } from '@features/blog/BlogPostCard';
+import { NavBar } from '@layout/navbar/NavBar';
+import { JsonLd } from '@ui/JsonLd';
+import { Pagination } from '@ui/Pagination';
+import { Typography } from '@ui/Typography';
+
+import { BlogSearchParams } from '@lib/blog-types';
+import { getAllTags, getPaginatedPosts } from '@lib/blog-utils';
+import { blogPageJsonLd } from '@lib/jsonld';
 
 export const metadata: Metadata = {
   title: 'Blog | insuasti.com',
@@ -90,7 +91,7 @@ async function BlogPageContent({ searchParams }: BlogPageProps) {
         ))}
       </div>
 
-      <BlogPagination paginatedData={paginatedData} />
+      <Pagination paginatedData={paginatedData} />
     </>
   );
 }

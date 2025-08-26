@@ -1,17 +1,18 @@
-import { NavBar } from '@/components/layout/navbar/NavBar';
-import { Typography } from '@/components/ui/Typography';
 import { Suspense } from 'react';
-import { ProjectSearchParams } from '@/lib/project-types';
-import { getPaginatedProjects, getAllTech, getAllProjects } from '@/lib/project-utils';
-import { ProjectCard } from '@/components/lockups/projects/ProjectCard';
-import { ProjectFilters } from '@/components/lockups/projects/ProjectFilters';
-import { BlogPagination } from '@/components/lockups/blog/BlogPagination';
-import type { PaginatedBlogPosts } from '@/lib/blog-types';
-import Link from 'next/link';
-import { JsonLd } from '@/components/ui/JsonLd';
-import { projectsPageJsonLd } from '@/lib/jsonld';
-
 import type { Metadata } from 'next';
+import Link from 'next/link';
+
+import { ProjectCard } from '@features/projects/ProjectCard';
+import { ProjectFilters } from '@features/projects/ProjectFilters';
+import { NavBar } from '@layout/navbar/NavBar';
+import { JsonLd } from '@ui/JsonLd';
+import { Pagination } from '@ui/Pagination';
+import { Typography } from '@ui/Typography';
+
+import type { PaginatedBlogPosts } from '@lib/blog-types';
+import { projectsPageJsonLd } from '@lib/jsonld';
+import { ProjectSearchParams } from '@lib/project-types';
+import { getAllProjects, getAllTech, getPaginatedProjects } from '@lib/project-utils';
 
 export const metadata: Metadata = {
   title: 'Projects | insuasti.com',
@@ -73,7 +74,7 @@ async function ProjectsPageContent({ searchParams }: ProjectsPageProps) {
         ))}
       </div>
       <div className="mt-10">
-        <BlogPagination paginatedData={paginationForReuse} />
+        <Pagination paginatedData={paginationForReuse} />
       </div>
     </>
   );

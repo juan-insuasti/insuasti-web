@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import { ProjectMeta, PaginatedProjects } from './project-types';
+
+import { PaginatedProjects, ProjectMeta } from './project-types';
 
 const PROJECTS_PER_PAGE = 6;
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'projects');

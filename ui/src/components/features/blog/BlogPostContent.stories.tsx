@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BlogPostContent } from './BlogPostContent';
+
 import { BlogPost } from '@/lib/blog-types';
+
+import { BlogPostContent } from './BlogPostContent';
 
 const meta: Meta<typeof BlogPostContent> = {
   title: 'UI/BlogPostContent',
@@ -27,7 +29,8 @@ const samplePost: BlogPost = {
   title: 'Hello World: Starting My Blog Journey',
   date: '2025-01-15',
   author: 'Juan Insuasti',
-  excerpt: 'Welcome to my blog! This is the first post where I share my thoughts on frontend development and web technologies.',
+  excerpt:
+    'Welcome to my blog! This is the first post where I share my thoughts on frontend development and web technologies.',
   tags: ['introduction', 'frontend', 'blog'],
   content: `# Welcome to My Blog
 
@@ -64,7 +67,7 @@ Some key concepts to master:
 
 > "The best way to learn is by doing" - Unknown
 
-I look forward to sharing more insights and tutorials with you. Stay tuned for more content!`,  
+I look forward to sharing more insights and tutorials with you. Stay tuned for more content!`,
 };
 
 const samplePostHTMLContent = `<h1>Welcome to My Blog</h1>
@@ -115,7 +118,8 @@ const technicalPost: BlogPost = {
   title: 'Building Performant React Applications',
   date: '2025-01-10',
   author: 'Juan Insuasti',
-  excerpt: 'Learn essential techniques for optimizing React applications, from code splitting to memory management.',
+  excerpt:
+    'Learn essential techniques for optimizing React applications, from code splitting to memory management.',
   tags: ['react', 'performance', 'optimization', 'frontend'],
   content: `# Building Performant React Applications
 
@@ -292,10 +296,10 @@ export const Default: Story = {
 
 export const TechnicalPost: Story = {
   args: {
-      post: technicalPost,
-      htmlContent: technicalPostHTMLContent,
-    },
-  };
+    post: technicalPost,
+    htmlContent: technicalPostHTMLContent,
+  },
+};
 
 export const ShortPost: Story = {
   args: {
@@ -308,7 +312,16 @@ export const ManyTags: Story = {
   args: {
     post: {
       ...samplePost,
-      tags: ['react', 'nextjs', 'typescript', 'tailwind', 'storybook', 'testing', 'performance', 'optimization'],
+      tags: [
+        'react',
+        'nextjs',
+        'typescript',
+        'tailwind',
+        'storybook',
+        'testing',
+        'performance',
+        'optimization',
+      ],
     },
   },
 };

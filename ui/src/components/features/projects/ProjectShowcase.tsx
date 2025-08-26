@@ -1,10 +1,13 @@
 import Link from 'next/link';
-import { getHighlightedProjects } from '@/lib/project-utils';
-import { ProjectHighlightCarousel } from './ProjectHighlightCarousel';
-import { Typography } from '../../ui/Typography';
+
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { SectionFullPage } from '../../layout/SectionFullPage';
-import { Button } from '@/components/ui/Button';
+
+import { SectionFullPage } from '@containers/SectionFullPage';
+import { ProjectHighlightCarousel } from '@features/projects/ProjectHighlightCarousel';
+import { Button } from '@ui/Button';
+import { Typography } from '@ui/Typography';
+
+import { getHighlightedProjects } from '@lib/project-utils';
 
 export async function ProjectShowcase() {
   const highlightedProjects = getHighlightedProjects(5); // Get up to 5 highlighted projects
