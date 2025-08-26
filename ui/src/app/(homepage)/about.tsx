@@ -1,4 +1,4 @@
-import { SectionFullPage } from '@/containers/SectionFullPage';
+import { SectionFullPage } from '@/components/SectionFullPage';
 import { Typography } from '@/containers/Typography';
 import Image from 'next/image';
 import React from 'react';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionFullPage } from '@/containers/SectionFullPage';
+import { SectionFullPage } from '@/components/SectionFullPage';
 import { Typography } from '@/containers/Typography';
 
 import '@/app/globals.css';

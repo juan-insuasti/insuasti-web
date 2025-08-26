@@ -2,10 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink, Calendar, Zap } from 'lucide-react';
 import { ProjectMeta } from '@/lib/project-types';
-import { TechBadge } from './TechBadge';
+import { TechBadge } from '../components/TechBadge';
 import { formatDate } from '@/lib/markdown-utils';
 import { cn } from '@/lib/utils';
-import { SimpIcon } from './SimpIcon';
+import { SimpIcon } from '../components/SimpIcon';
 import { siGithub } from 'simple-icons';
 import { Button } from '@/components/Button';
 

@@ -3,7 +3,7 @@ import { getLatestPost, getHighlightedPost } from '@/lib/blog-utils';
 import { BlogPostCard } from './BlogPostCard';
 import { Typography } from './Typography';
 import { ArrowRight } from 'lucide-react';
-import { SectionFullPage } from './SectionFullPage';
+import { SectionFullPage } from '../components/SectionFullPage';
 import { Button } from '@/components/Button';
 
 export async function BlogShowcase() {

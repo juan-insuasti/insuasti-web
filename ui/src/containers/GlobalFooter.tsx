@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography } from '@/containers/Typography';
 
 import '@/app/globals.css';
-import { LogoIcon } from './customIcons/LogoIcon';
+import { LogoIcon } from '../components/customIcons/LogoIcon';
 
 export const GlobalFooter = () => {
   return (

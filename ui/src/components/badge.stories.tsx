@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from './badge';
+import { Badge } from './ui/badge';
 
 const meta: Meta<typeof Badge> = {
   title: 'UI/Badge',
@@ -78,9 +78,15 @@ export const AllVariants: Story = {
         <Badge variant="outline">Outline</Badge>
       </div>
       <div className="flex gap-2">
-        <Badge variant="default" className="hover:bg-primary/80">Hoverable Default</Badge>
-        <Badge variant="secondary" className="hover:bg-secondary/80">Hoverable Secondary</Badge>
-        <Badge variant="outline" className="hover:bg-muted">Hoverable Outline</Badge>
+        <Badge variant="default" className="hover:bg-primary/80">
+          Hoverable Default
+        </Badge>
+        <Badge variant="secondary" className="hover:bg-secondary/80">
+          Hoverable Secondary
+        </Badge>
+        <Badge variant="outline" className="hover:bg-muted">
+          Hoverable Outline
+        </Badge>
       </div>
     </div>
   ),
