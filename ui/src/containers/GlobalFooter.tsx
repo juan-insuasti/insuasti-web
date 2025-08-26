@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '@/ui/Typography';
+import { Typography } from '@/containers/Typography';
 
 import '@/app/globals.css';
 import { LogoIcon } from './customIcons/LogoIcon';
@@ -7,9 +7,9 @@ import { LogoIcon } from './customIcons/LogoIcon';
 export const GlobalFooter = () => {
   return (
     <footer className="relative w-full">
-      <section className="mb-40 flex flex-col items-center justify-center gap-4 text-center">
+      <section className="mb-32 flex flex-col items-center justify-center gap-4 text-center">
         <LogoIcon
-          className="h-32 w-32 fill-foreground"
+          className="h-16 w-16 fill-foreground"
           aria-label="Logo of a floppy disk and a cat"
         />
       </section>

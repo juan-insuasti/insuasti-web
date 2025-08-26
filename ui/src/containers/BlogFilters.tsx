@@ -33,7 +33,7 @@ export function BlogFilters({ allTags, currentTag, currentSearch }: BlogFiltersP
       // Only navigate if the search has actually changed
       const newSearch = searchInput.trim();
       if (newSearch !== currentSearch) {
-        router.push(`/blog?${params.toString()}`);
+        router.push(`/blog?${params.toString()}`, { scroll: false });
       }
     }, 200); // 200ms debounce
 
@@ -57,12 +57,12 @@ export function BlogFilters({ allTags, currentTag, currentSearch }: BlogFiltersP
     // Reset to first page when filtering
     params.delete('page');
 
-    router.push(`/blog?${params.toString()}`);
+    router.push(`/blog?${params.toString()}`, { scroll: false });
   };
 
   const clearFilters = () => {
     setSearchInput('');
-    router.push('/blog');
+    router.push('/blog', { scroll: false });
   };
 
   const hasActiveFilters = currentTag || currentSearch;

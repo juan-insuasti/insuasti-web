@@ -1,6 +1,6 @@
 import React from 'react';
-import { SectionFullPage } from '@/ui/SectionFullPage';
-import { Typography } from '@/ui/Typography';
+import { SectionFullPage } from '@/containers/SectionFullPage';
+import { Typography } from '@/containers/Typography';
 
 import '@/app/globals.css';
 
@@ -20,7 +20,11 @@ export const Hero = ({ title, description, children }: HeroProps) => {
       <Typography as="h1" variant="h1" className="text-5xl leading-tight md:text-7xl lg:text-8xl">
         {title}
       </Typography>
-      <Typography as="p" variant="h3" className="mt-1 font-inter font-normal md:mt-2 lg:mt-4 text-foreground">
+      <Typography
+        as="p"
+        variant="h3"
+        className="mt-1 font-inter font-normal text-foreground md:mt-2 lg:mt-4"
+      >
         {description}
       </Typography>
       {children}
