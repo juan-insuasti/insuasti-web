@@ -24,7 +24,7 @@ export function MobileNavBar({ navItems }: MobileNavBarProps): JSX.Element {
     <div className="block w-full sm:hidden">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="outline">
+          <Button variant="outline" aria-label="Open menu">
             <SquareMenu />
           </Button>
         </SheetTrigger>
