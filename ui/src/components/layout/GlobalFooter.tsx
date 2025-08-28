@@ -24,10 +24,10 @@ export const GlobalFooter = () => {
         </div>
         <div className="w-full bg-primary">
           <div className="flex flex-col items-center justify-center gap-3 py-6">
-            <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
+            <Typography as="p" variant={'p'} className="text-center text-sm !text-white">
               © {new Date().getFullYear()} Juan Insuasti. All rights reserved.
             </Typography>
-            <Typography as="p" variant={'p'} className="text-center text-sm !text-foreground">
+            <Typography as="p" variant={'p'} className="text-center text-sm !text-white">
               Handcrafted with <span className="text-red-500">❤️</span> by Juan Insuasti
             </Typography>
           </div>
