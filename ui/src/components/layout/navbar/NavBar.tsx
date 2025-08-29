@@ -32,7 +32,7 @@ export function NavBar(): JSX.Element {
   return (
     <header className="fixed inset-0 z-50 mx-auto h-14 w-full bg-background opacity-90 shadow-md">
       <nav className="container mx-auto flex h-full items-center justify-between px-4">
-        <Link href="/" className="relative flex h-10 w-10 items-center justify-center gap-4">
+        <Link href="/" className="flex  items-center justify-center gap-4">
           <LogoIcon className="h-9 w-9 fill-foreground flex-auto flex-shrink-0 flex-grow-0" />
           <Typography as="span" className="translate-y-[2px] text-4xl text-primary" variant={'h2'}>
             Insuasti
