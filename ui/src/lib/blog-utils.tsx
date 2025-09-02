@@ -2,6 +2,11 @@ import fs from 'fs';
 import path from 'path';
 
 import matter from 'gray-matter';
+import { Linkedin } from 'lucide-react';
+import { siBluesky, siFacebook, siX } from 'simple-icons';
+
+import { SimpIcon } from '@ui/SimpIcon';
+import { SocialLink } from '@ui/SocialLinks';
 
 import { BlogPost, BlogPostMeta, PaginatedBlogPosts } from './blog-types';
 
@@ -213,3 +218,30 @@ export function getHighlightedPost(): BlogPostMeta | null {
   const randomIndex = Math.floor(Math.random() * highlightedPosts.length);
   return highlightedPosts[randomIndex];
 }
+
+// Gets social links to share post
+export const getSocialLinks = (post: BlogPostMeta): SocialLink[] => {
+  const url = `https://insuasti.com/blog/${post.slug}`;
+  return [
+    {
+      icon: <SimpIcon icon={siFacebook} />,
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+      alt: 'Share in Facebook',
+    },
+    {
+      icon: <Linkedin className="h-7 w-7" />,
+      href: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}`,
+      alt: 'Share in LinkedIn',
+    },
+    {
+      alt: 'Share in X',
+      icon: <SimpIcon icon={siX} />,
+      href: `https://x.com/intent/tweet?url=${encodeURIComponent(url)}`,
+    },
+    {
+      alt: 'Share in BlueSky',
+      icon: <SimpIcon icon={siBluesky} />,
+      href: `https://bsky.app/intent/compose?text=${encodeURIComponent(url)}`,
+    },
+  ];
+};
