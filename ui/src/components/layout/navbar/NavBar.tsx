@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import Link from 'next/link';
 
-import { LogoIcon } from '@ui/customIcons/LogoIcon';
+import { LogoIcon } from '@ui/icons/LogoIcon';
 import { ThemeMenu } from '@ui/ThemeMenu';
 import { Typography } from '@ui/Typography';
 

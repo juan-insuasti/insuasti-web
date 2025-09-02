@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Badge } from '@ui/badge';
+import { Badge } from '@ui/Badge';
 import { Typography } from '@ui/Typography';
 
 import { BlogPostMeta } from '@lib/blog-types';

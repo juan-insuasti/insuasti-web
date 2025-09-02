@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 import { Calendar, Clock, User } from 'lucide-react';
 
+import { Badge } from '@ui/Badge';
 import { Typography } from '@ui/Typography';
 
 import { BlogPost } from '@/lib/blog-types';
 import { calculateReadingTime, formatDate } from '@/lib/markdown-utils';
-import { Badge } from '@/components/ui/badge';
 
 interface BlogPostContentProps {
   post: BlogPost;

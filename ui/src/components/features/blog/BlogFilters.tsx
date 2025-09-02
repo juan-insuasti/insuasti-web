@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 import { Search } from 'lucide-react';
 
-import { Badge } from '@ui/badge';
+import { Badge } from '@ui/Badge';
 
 interface BlogFiltersProps {
   allTags: string[];

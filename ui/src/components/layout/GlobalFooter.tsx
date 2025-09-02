@@ -5,7 +5,7 @@ import { Typography } from '@ui/Typography';
 //TODO: is this really needed?
 import '@/app/globals.css';
 
-import { LogoIcon } from '@ui/customIcons/LogoIcon';
+import { LogoIcon } from '@ui/icons/LogoIcon';
 
 export const GlobalFooter = () => {
   return (
