@@ -41,7 +41,7 @@ export async function BlogShowcase() {
                   Latest Post
                 </Typography>
               </div>
-              <div className="max-w-none flex-grow">
+              <div className="max-w-none grow">
                 <BlogPostCard post={latestPost} />
               </div>
             </div>
@@ -59,7 +59,7 @@ export async function BlogShowcase() {
                   Highlighted
                 </div>
               </div>
-              <div className="max-w-none flex-grow">
+              <div className="max-w-none grow">
                 {/* Featured post badge */}
                 <BlogPostCard post={highlightedPost} />
               </div>

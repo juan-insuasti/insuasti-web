@@ -43,8 +43,8 @@ export function ProjectHighlightCarousel({ projects }: ProjectHighlightCarouselP
     <div className="relative">
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute left-4 top-4 h-24 w-24 animate-pulse rounded-full bg-gradient-to-br from-primary/10 to-transparent blur-xl"></div>
-        <div className="absolute bottom-8 right-8 h-32 w-32 animate-pulse rounded-full bg-gradient-to-bl from-primary/5 to-transparent blur-2xl delay-1000"></div>
+        <div className="absolute left-4 top-4 h-24 w-24 animate-pulse rounded-full bg-linear-to-br from-primary/10 to-transparent blur-xl"></div>
+        <div className="absolute bottom-8 right-8 h-32 w-32 animate-pulse rounded-full bg-linear-to-bl from-primary/5 to-transparent blur-2xl delay-1000"></div>
       </div>
 
       <Carousel
@@ -78,7 +78,7 @@ export function ProjectHighlightCarousel({ projects }: ProjectHighlightCarouselP
                   <div className="absolute -right-2 -top-2 z-10">
                     <div className="relative">
                       <div className="absolute inset-0 animate-ping rounded-full bg-primary/30 blur"></div>
-                      <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/80 text-xs font-bold text-primary-foreground shadow-lg">
+                      <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br from-primary to-primary/80 text-xs font-bold text-primary-foreground shadow-lg">
                         ★
                       </div>
                     </div>

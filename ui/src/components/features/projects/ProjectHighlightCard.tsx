@@ -33,20 +33,20 @@ const statusConfig: Record<
   'in-progress': {
     label: 'In Progress',
     classes:
-      'bg-gradient-to-r from-yellow-100 to-orange-100 text-yellow-800 border-yellow-300 dark:from-yellow-900/30 dark:to-orange-900/30 dark:text-yellow-200 dark:border-yellow-700',
+      'bg-linear-to-r from-yellow-100 to-orange-100 text-yellow-800 border-yellow-300 dark:from-yellow-900/30 dark:to-orange-900/30 dark:text-yellow-200 dark:border-yellow-700',
     icon: <Zap className="h-3 w-3" />,
     animate: true,
   },
   beta: {
     label: 'Beta',
     classes:
-      'bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 border-purple-300 dark:from-purple-900/30 dark:to-pink-900/30 dark:text-purple-200 dark:border-purple-700',
+      'bg-linear-to-r from-purple-100 to-pink-100 text-purple-800 border-purple-300 dark:from-purple-900/30 dark:to-pink-900/30 dark:text-purple-200 dark:border-purple-700',
     animate: true,
   },
   stable: {
     label: 'Stable',
     classes:
-      'bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border-green-300 dark:from-green-900/30 dark:to-emerald-900/30 dark:text-green-200 dark:border-green-700',
+      'bg-linear-to-r from-green-100 to-emerald-100 text-green-800 border-green-300 dark:from-green-900/30 dark:to-emerald-900/30 dark:text-green-200 dark:border-green-700',
   },
   archived: {
     label: 'Archived',
@@ -66,7 +66,7 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
       <div className="relative">
         {/* Image section with overlay effects */}
         <div className="relative aspect-video overflow-hidden">
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 z-10 bg-linear-to-t from-black/20 via-transparent to-transparent" />
           <Image
             src={project.coverImage}
             alt={project.title}
@@ -95,7 +95,7 @@ export function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
             <div className="absolute left-4 top-4 z-20">
               <div className="relative">
                 <div className="absolute inset-0 animate-ping rounded-full bg-yellow-400/50 blur" />
-                <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 text-white shadow-lg">
+                <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br from-yellow-400 to-orange-500 text-white shadow-lg">
                   ⭐
                 </div>
               </div>

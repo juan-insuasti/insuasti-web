@@ -16,10 +16,10 @@ const buttonVariants = cva(
         primary: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
         destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
         outline:
-          'group/btn   border border-primary/20 bg-gradient-to-r from-primary/10 to-primary/5  transition-all duration-300 hover:from-primary/20 hover:to-primary/10 hover:text-primary',
+          'group/btn   border border-primary/20 bg-linear-to-r from-primary/10 to-primary/5  transition-all duration-300 hover:from-primary/20 hover:to-primary/10 hover:text-primary',
         secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
         ghost:
-          'group relative inline-flex items-center gap-3 rounded-lg border-2 border-transparent bg-gradient-to-r from-primary to-primary/90 font-semibold text-foreground transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/25',
+          'group relative inline-flex items-center gap-3 rounded-lg border-2 border-transparent bg-linear-to-r from-primary to-primary/90 font-semibold text-foreground transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/25',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       effect: {
