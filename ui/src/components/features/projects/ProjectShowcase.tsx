@@ -24,7 +24,7 @@ export async function ProjectShowcase() {
         <div className="relative mb-16 text-center">
           {/* Animated background gradient */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div>
+            <div className="absolute inset-0 animate-pulse bg-linear-to-r from-transparent via-primary/5 to-transparent"></div>
             <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-primary/10 blur-3xl"></div>
           </div>
 
@@ -40,7 +40,7 @@ export async function ProjectShowcase() {
             <Typography
               as="h2"
               variant="h2"
-              className="mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent"
+              className="mb-6 bg-linear-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent"
             >
               Spotlight Projects
             </Typography>
@@ -54,7 +54,7 @@ export async function ProjectShowcase() {
         {/* Projects Carousel */}
         <div className="relative">
           {/* Gradient borders for extra flair */}
-          <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-r from-primary/20 via-transparent to-primary/20 blur-sm"></div>
+          <div className="absolute inset-0 -z-10 rounded-2xl bg-linear-to-r from-primary/20 via-transparent to-primary/20 blur-sm"></div>
 
           <ProjectHighlightCarousel projects={highlightedProjects} />
         </div>
