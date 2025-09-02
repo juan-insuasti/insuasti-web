@@ -6,13 +6,14 @@ import { ArrowLeft } from 'lucide-react';
 import { BlogPostCard } from '@features/blog/BlogPostCard';
 import { BlogPostContent } from '@features/blog/BlogPostContent';
 import { NavBar } from '@layout/navbar/NavBar';
-import { JsonLd } from '@ui/JsonLd';
-import { SocialLinks } from '@ui/SocialLinks';
-import { Typography } from '@ui/Typography';
 
 import { getAllPosts, getPostBySlug, getRelatedPosts, getSocialLinks } from '@lib/blog-utils';
 import { blogPostJsonLd } from '@lib/jsonld';
 import { renderMarkdown } from '@lib/markdown-utils';
+
+import { JsonLd } from '@/components/custom/JsonLd';
+import { SocialLinks } from '@/components/custom/SocialLinks';
+import { Typography } from '@/components/custom/Typography';
 
 interface BlogPostPageProps {
   params: Promise<{

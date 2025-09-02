@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { MarkdownImage } from './MarkdownImage';
+
+import { MarkdownImage } from '@ui/MarkdownImage';
 
 const meta: Meta<typeof MarkdownImage> = {
   title: 'UI/MarkdownImage',

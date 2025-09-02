@@ -2,12 +2,12 @@ import { BlogShowcase } from '@features/blog/BlogShowcase';
 import { About } from '@features/homepage/About';
 import { Hero } from '@features/homepage/Hero';
 import { ProjectShowcase } from '@features/projects/ProjectShowcase';
+import { NavBar } from '@layout/navbar/NavBar';
 import { JsonLd } from '@ui/JsonLd';
+import { SocialLinks } from '@ui/SocialLinks';
 
 import { SOCIAL_LINKS } from '@/lib/consts';
 import { homepageJsonLd } from '@/lib/jsonld';
-import { SocialLinks } from '@/components/ui/SocialLinks';
-import { NavBar } from '@/components/layout/navbar/NavBar';
 
 export default function Home() {
   const HeroTitle = (
