@@ -7,9 +7,10 @@ import { BlogPostCard } from '@features/blog/BlogPostCard';
 import { BlogPostContent } from '@features/blog/BlogPostContent';
 import { NavBar } from '@layout/navbar/NavBar';
 import { JsonLd } from '@ui/JsonLd';
+import { SocialLinks } from '@ui/SocialLinks';
 import { Typography } from '@ui/Typography';
 
-import { getAllPosts, getPostBySlug, getRelatedPosts } from '@lib/blog-utils';
+import { getAllPosts, getPostBySlug, getRelatedPosts, getSocialLinks } from '@lib/blog-utils';
 import { blogPostJsonLd } from '@lib/jsonld';
 import { renderMarkdown } from '@lib/markdown-utils';
 
@@ -93,10 +94,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Blog post content */}
           <BlogPostContent post={post} htmlContent={htmlContent} />
 
+          {/* Share */}
+          <section className="mt-16 border-t border-border pt-16  mx-auto max-w-4xl">
+            <Typography as="h2" variant="h2" className="mb-8">
+              share
+            </Typography>
+            <SocialLinks socialLinks={getSocialLinks(post)} />
+          </section>
           {/* Related posts */}
           {relatedPosts.length > 0 && (
-            <section className="mt-16 border-t border-border pt-16">
-              <Typography as="h2" variant="h2" className="mb-8 text-center">
+            <section className="mt-16 border-t border-border pt-16  mx-auto max-w-4xl">
+              <Typography as="h2" variant="h2" className="mb-8">
                 Related Posts
               </Typography>
 

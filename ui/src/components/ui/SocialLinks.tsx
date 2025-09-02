@@ -3,10 +3,11 @@ import Link from 'next/link';
 
 import clsx from 'clsx';
 
-type SocialLink = {
+export type SocialLink = {
   href: string;
-  src: string;
+  src?: string;
   alt: string;
+  icon?: React.ReactNode;
 };
 
 export interface SocialProps {
@@ -21,10 +22,12 @@ export const SocialLinks = ({ className, socialLinks = [] }: SocialProps) => {
         <Link
           key={index}
           href={link.href}
+          aria-label={link.alt}
           target="_blank"
-          className="relative aspect-square h-14 md:h-16"
+          className={clsx('relative', link.src && 'aspect-square h-14 md:h-16')}
         >
-          <Image src={link.src} alt={link.alt} fill />
+          {link.src && <Image src={link.src} alt={link.alt} fill />}
+          {!link.src && link.icon}
         </Link>
       ))}
     </div>
