@@ -18,7 +18,7 @@ I left my last post, with my hopes up high. Ready to begin my journey into AI-as
 
 When I think of vibe coding I imagine it as effortless as writing a prompt like "build a webpage for my cats" and BOOM, instant website. At least, that's what all the hype is about, right? People are selling AI as this magical tool that can do almost everything at a fraction of the cost. Why pay for a software developer when you can ask the genie in the lamp to grant your coding wishes? A $200 monthly AI subscription versus an $8,000 human who needs breaks, has to breathe, and demands food? The choice seems obvious to our new AI overlords.
 
-But beyond what I could infer from all the hype, I had never actually looked into the real definition of vibe coding. So I did a bit of research, and honestly? It blew my mind. (it even has a dictionary [entry](https://www.merriam-webster.com/slang/vibe-coding)
+But beyond what I could infer from all the hype, I had never actually looked into the real definition of vibe coding. So I did a bit of research, and honestly? It blew my mind. (it even has a dictionary [entry](https://www.merriam-webster.com/slang/vibe-coding))
 
 According to [wikipedia](https://en.wikipedia.org/wiki/Vibe_coding):
 
@@ -107,7 +107,7 @@ Food for thought.
 My conclusion after this first experiment is that full vibe coding works best for:
 
 - Disposable prototypes where perfection isn't the goal
-- Greenfield projects (that's engineer-speak for "new projects from scratch")
+- Greenfield projects
 - Design inspiration and rapid ideation
 - Simple, isolated features rather than complex integrations
 
