@@ -51,3 +51,5 @@ My objective is to use AI to help me build features for my website, and, if poss
 That should be pretty common and easy, right?
 
 I had a plan, and now it was time to get my hands dirty. I launched VSCode, created a new branch and with my expectations high in the sky, I started prompting... reality plummeted me back to earth, but that disaster deserves its own post. See you in part 3. Bye!
+
+Next up: [My First Vibe Coding Experiment: an optimistic approach](/blog/my-first-vibe-coding-experiment)
