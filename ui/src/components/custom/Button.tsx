@@ -1,8 +1,7 @@
-import { JSX } from 'react';
+import React from 'react';
 
-import { cva } from 'class-variance-authority';
-
-import { ButtonProps, Button as ShadButton } from '@ui/shad-button';
+import { Slot } from '@radix-ui/react-slot';
+import { cva, VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
 
@@ -16,10 +15,10 @@ const buttonVariants = cva(
         primary: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
         destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
         outline:
-          'group/btn   border border-primary/20 bg-linear-to-r from-primary/10 to-primary/5  transition-all duration-300 hover:from-primary/20 hover:to-primary/10 hover:text-primary',
+          'group/btn border border-primary/20  bg-linear-to-r from-secondary/10 to-primary/5  transition-all duration-300 hover:from-primary/20 hover:to-primary/10 hover:text-primary',
         secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
         ghost:
-          'group relative inline-flex items-center gap-3 rounded-lg border-2 border-transparent bg-linear-to-r from-primary to-primary/90 font-semibold text-foreground transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/25',
+          'group relative inline-flex items-center gap-3 rounded-lg border-2 border-transparent font-semibold text-foreground transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/25',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       effect: {
@@ -39,18 +38,20 @@ const buttonVariants = cva(
   },
 );
 
-export const Button = ({
-  variant,
-  size,
-  className,
-  children,
-  ...props
-}: ButtonProps & {
-  effect?: 'shiny';
-}): JSX.Element => {
-  return (
-    <ShadButton {...props} className={cn(buttonVariants({ variant, size, className }))}>
-      {children}
-    </ShadButton>
-  );
-};
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button';
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+    );
+  },
+);
+Button.displayName = 'Button';
+
+export { Button, buttonVariants };

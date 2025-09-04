@@ -2,6 +2,7 @@
 @import 'tailwindcss';
 
 @config '../../tailwind.config.ts';
+@custom-variant dark (&:where(.dark, .dark *));
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
@@ -207,26 +208,32 @@
     @apply scroll-smooth;
   }
 
+  p,
   .p {
     @apply font-inter text-muted-foreground text-left text-lg font-normal lg:text-xl;
   }
 
+  h1,
   .h1 {
     @apply font-poppins text-left text-4xl/9 font-bold uppercase md:text-5xl lg:text-6xl;
   }
 
+  h2,
   .h2 {
     @apply font-poppins text-left text-3xl font-bold uppercase md:text-4xl lg:text-5xl;
   }
 
+  h3,
   .h3 {
     @apply font-inter text-left text-2xl font-bold md:text-3xl lg:text-4xl;
   }
 
+  h4,
   .h4 {
     @apply font-inter text-left text-xl font-bold md:text-2xl lg:text-3xl;
   }
 
+  small,
   .small {
     @apply font-inter text-xs font-normal text-gray-500;
   }
