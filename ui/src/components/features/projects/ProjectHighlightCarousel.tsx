@@ -72,18 +72,6 @@ export function ProjectHighlightCarousel({ projects }: ProjectHighlightCarouselP
                 <div className="transform transition-all duration-300 group-hover/card:shadow-2xl group-hover/card:shadow-primary/10">
                   <ProjectHighlightCard project={project} />
                 </div>
-
-                {/* Featured badge with animation */}
-                {project.highlighted && (
-                  <div className="absolute -right-2 -top-2 z-10">
-                    <div className="relative">
-                      <div className="absolute inset-0 animate-ping rounded-full bg-primary/30 blur"></div>
-                      <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br from-primary to-primary/80 text-xs font-bold text-primary-foreground shadow-lg">
-                        ★
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             </CarouselItem>
           ))}

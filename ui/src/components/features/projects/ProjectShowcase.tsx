@@ -61,13 +61,13 @@ export async function ProjectShowcase() {
 
         {/* Call to Action with Enhanced Styling */}
         <div className="mt-16 text-center">
-          <Button asChild variant="ghost" size="lg">
+          <Button asChild variant="ghost" className="dark:bg-secondary" size="lg">
             <Link href="/projects">
               <span>Explore All Projects</span>
               <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               {/* Animated sparkle elements */}
-              <div className="absolute -right-1 -top-1 h-2 w-2 animate-ping rounded-full bg-black duration-2000 dark:bg-white/80"></div>
-              <div className="absolute -bottom-1 -left-1 h-1.5 w-1.5 animate-ping rounded-full bg-black delay-700 duration-3000 dark:bg-white/60"></div>
+              <div className="absolute -right-1 -top-1 h-2 w-2 animate-ping rounded-full bg-foreground duration-2000"></div>
+              <div className="absolute -bottom-1 -left-1 h-1.5 w-1.5 animate-ping rounded-full bg-foreground delay-700 duration-3000"></div>
             </Link>
           </Button>
         </div>
