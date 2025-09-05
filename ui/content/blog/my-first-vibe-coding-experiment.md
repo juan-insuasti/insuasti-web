@@ -96,7 +96,7 @@ However, this little experiment confirmed something important: creating meaningf
 
 ## The Real Cost of Vibe Coding
 
-Here's something that made me pause: I burned through more than 10% of my monthly Copilot credits on this single experiment. That makes me wonder if whoever coined the term "vibe coding" was secretly thinking about how much money AI companies would make from vibe coders burning through credits with each iteration—spending resources to explain errors instead of taking one minute to fix simple issues themselves.
+Here's something that made me pause: I burned through more than 10% of my monthly Copilot credits on this single experiment (less than 2 hour). That makes me wonder if whoever coined the term "vibe coding" was secretly thinking about how much money AI companies would make from vibe coders burning through credits with each iteration, spending resources to explain errors instead of taking one minute to fix simple issues themselves.
 
 Food for thought.
 
@@ -104,18 +104,13 @@ Food for thought.
 
 ## My Takeaways So Far
 
-My conclusion after this first experiment is that full vibe coding works best for:
-
-- Disposable prototypes where perfection isn't the goal
-- Greenfield projects
-- Design inspiration and rapid ideation
-- Simple, isolated features rather than complex integrations
+My conclusion after this first experiment is that full vibe coding may work for disposable prototypes, greenfield projects or even design inspiration. As things are now, I wouldn't trust it for anything more complex than that. My position could change if the technology improves, but for now, I see vibe coding as a fun experiment rather than a practical development approach. Sorry Skynet, not today.
 
 > [!NOTE]
 > A greenfield project is basically a new project, but saying "greenfield" makes you sound way more professional in meetings.
 
 ## What's Next?
 
-I'm not giving up on vibe coding just yet. In my next post, I'll level up my approach with detailed instructions, comprehensive project descriptions, and strategic iteration techniques. According to the internet, I simply lacked context in this first attempt.
+I'm not giving up on AI assisted coding just yet. In my next post, I'll level up my approach with detailed instructions, comprehensive project descriptions, and strategic iteration techniques. According to the internet, I simply lacked context in this first attempt.
 
 I'll spoil a bit of my next experiment: I tried this improved approach, and things got significantly better... the dev server actually ran without issues on the first try. Stay tuned for less vibe and more actual coding!
