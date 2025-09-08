@@ -52,7 +52,7 @@ export async function ProjectShowcase() {
         </div>
 
         {/* Projects Carousel */}
-        <div className="relative">
+        <div className="relative after:absolute after:inset-0 after:h-full after:w-full after:rounded-lg after:border after:border-primary/20 after:bg-primary after:content-[''] hover:after:blur-md after:transition-all after:duration-300 after:-z-10 after:p-2 after:blur-xs">
           {/* Gradient borders for extra flair */}
           <div className="absolute inset-0 -z-10 rounded-2xl bg-linear-to-r from-primary/20 via-transparent to-primary/20 blur-sm"></div>
 
@@ -61,7 +61,7 @@ export async function ProjectShowcase() {
 
         {/* Call to Action with Enhanced Styling */}
         <div className="mt-16 text-center">
-          <Button asChild variant="ghost" className="dark:bg-secondary" size="lg">
+          <Button asChild variant="ghost" size="lg">
             <Link href="/projects">
               <span>Explore All Projects</span>
               <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />

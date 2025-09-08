@@ -33,23 +33,9 @@ export async function BlogShowcase() {
 
         {/* Posts Grid */}
         <div className="grid gap-8 sm:grid-cols-8 md:grid-cols-12 md:gap-12">
-          {/* Latest Post Section */}
-          {latestPost && (
-            <div className="flex flex-col gap-2 sm:col-span-8 md:col-span-6">
-              <div className="mb-6 flex items-center justify-between">
-                <Typography as="h3" variant="h3" className="text-primary">
-                  Latest Post
-                </Typography>
-              </div>
-              <div className="max-w-none grow">
-                <BlogPostCard post={latestPost} />
-              </div>
-            </div>
-          )}
-
           {/* Highlighted Post Section */}
           {highlightedPost && (
-            <div className="flex flex-col gap-2 sm:col-span-8 md:col-span-6">
+            <div className="flex flex-col gap-2 sm:col-span-8 md:col-span-12 xl:col-span-6">
               <div className="mb-6 flex items-center justify-between">
                 <Typography as="h3" variant="h3" className="text-primary">
                   Featured Post
@@ -59,9 +45,22 @@ export async function BlogShowcase() {
                   Highlighted
                 </div>
               </div>
-              <div className="max-w-none grow">
+              <div className="max-w-none grow relative after:absolute after:inset-0 after:h-full after:w-full after:rounded-lg after:border after:border-primary/20 after:bg-primary after:content-[''] hover:after:blur-md after:transition-all after:duration-300 after:-z-10 after:p-2 after:blur-xs">
                 {/* Featured post badge */}
                 <BlogPostCard post={highlightedPost} />
+              </div>
+            </div>
+          )}
+          {/* Latest Post Section */}
+          {latestPost && (
+            <div className="flex flex-col gap-2 sm:col-span-8 md:col-span-12 xl:col-span-6">
+              <div className="mb-6 flex items-center justify-between">
+                <Typography as="h3" variant="h3" className="text-primary">
+                  Latest Post
+                </Typography>
+              </div>
+              <div className="max-w-none grow">
+                <BlogPostCard post={latestPost} />
               </div>
             </div>
           )}
