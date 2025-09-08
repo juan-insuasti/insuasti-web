@@ -10,9 +10,9 @@ import { LogoIcon } from '@ui/icons/LogoIcon';
 export const GlobalFooter = () => {
   return (
     <footer className="relative w-full">
-      <section className="mb-32 flex flex-col items-center justify-center gap-4 text-center">
+      <section className="mb-16 sm:mb-32 flex flex-col items-center justify-center gap-4 text-center">
         <LogoIcon
-          className="h-16 w-16 fill-foreground"
+          className="h-14 w-14 sm:h-16 sm:w-16 fill-foreground"
           aria-label="Logo of a floppy disk and a cat"
         />
       </section>
@@ -24,10 +24,10 @@ export const GlobalFooter = () => {
         </div>
         <div className="w-full bg-primary">
           <div className="flex flex-col items-center justify-center gap-3 py-6">
-            <Typography as="p" variant={'p'} className="text-center text-sm text-white!">
+            <Typography as="p" variant={'p'} className="text-center text-xs sm:text-sm text-white!">
               © {new Date().getFullYear()} Juan Insuasti. All rights reserved.
             </Typography>
-            <Typography as="p" variant={'p'} className="text-center text-sm text-white!">
+            <Typography as="p" variant={'p'} className="text-center text-xs sm:text-sm text-white!">
               Handcrafted with <span className="text-red-500">❤️</span> by Juan Insuasti
             </Typography>
           </div>
