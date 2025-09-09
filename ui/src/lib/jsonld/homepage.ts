@@ -14,7 +14,7 @@ export const homepageJsonLd = () => {
       email: 'juan.insuasti@gmail.com',
       jobTitle: 'Senior Frontend Engineer',
       description:
-        'Passionate about crafting helpful, delightful user experiences with a strong eye for detail. I work closely with design and product teams, building thoughtful experiences in cross-functional, multicultural environments.',
+        'Juan Insuasti is a Senior Frontend Engineer with expertise in React, TypeScript, and modern web frameworks such as Next.js and Remix. He focuses on creating scalable, performant, and accessible user interfaces, collaborating with product and design teams to deliver impactful solutions across international and cross-functional environments.',
       knowsAbout: [
         'React',
         'TypeScript',
@@ -52,7 +52,12 @@ export const homepageJsonLd = () => {
         addressRegion: 'Antioquia',
         addressCountry: 'CO',
       },
-      sameAs: ['https://github.com/juan-insuasti', 'https://linkedin.com/in/jinsuasti'],
+      sameAs: [
+        'https://github.com/juan-insuasti',
+        'https://www.linkedin.com/in/jinsuasti/',
+        'https://x.com/JuanInsuasti4',
+        'https://medium.com/@juan.insuasti',
+      ],
       hasOccupation: {
         '@type': 'Occupation',
         name: 'Senior Frontend Engineer',

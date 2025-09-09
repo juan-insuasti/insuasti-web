@@ -12,6 +12,7 @@ export { homepageJsonLd } from './homepage';
 export { blogPageJsonLd } from './blog-page';
 export { blogPostJsonLd } from './blog-post';
 export { projectsPageJsonLd } from './projects-page';
+export { aboutPageJsonLd } from './about';
 
 // Utility functions
 export * from './utils';
