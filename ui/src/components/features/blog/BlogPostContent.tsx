@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Calendar, Clock, User } from 'lucide-react';
+import { Calendar, Clock } from 'lucide-react';
 
 import { Badge } from '@ui/Badge';
 import { Typography } from '@ui/Typography';
@@ -28,11 +28,6 @@ export function BlogPostContent({ post, htmlContent }: BlogPostContentProps) {
           <div className="flex items-center gap-1">
             <Calendar className="h-4 w-4" />
             <time dateTime={post.date}>{formatDate(post.date)}</time>
-          </div>
-
-          <div className="flex items-center gap-1">
-            <User className="h-4 w-4" />
-            <span>{post.author}</span>
           </div>
 
           <div className="flex items-center gap-1">
