@@ -32,5 +32,10 @@
     "",
     "^[.]"
   ],
-  "plugins": ["prettier-plugin-tailwindcss", "@ianvs/prettier-plugin-sort-imports"]
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-glsl",
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-glsl"
+  ]
 }

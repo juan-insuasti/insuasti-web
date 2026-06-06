@@ -1,4 +1,4 @@
-import { FC, JSX } from 'react';
+import { FC } from 'react';
 
 import clsx from 'clsx';
 
@@ -7,14 +7,16 @@ type TTypographyVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'small';
 type TTypographyProps = {
   children: React.ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  as?: string;
   variant: TTypographyVariants;
 };
 
 export const Typography: FC<TTypographyProps> = ({
   children,
   className,
-  as: Tag = 'p',
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  as: Tag = 'p' as unknown as React.ComponentType<any>,
   variant,
 }) => {
   const baseStyles: Record<TTypographyVariants, string> = {
@@ -26,5 +28,9 @@ export const Typography: FC<TTypographyProps> = ({
     small: 'small',
   };
 
-  return <Tag className={clsx(baseStyles[variant], className)}>{children}</Tag>;
+  return (
+    <Tag className={clsx(baseStyles[variant], className)}>
+      <>{children}</>
+    </Tag>
+  );
 };
