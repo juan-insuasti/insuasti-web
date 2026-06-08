@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/nextjs';
 
 import { ThemeProvider } from '../src/components/custom/ThemeProvider';
 import { fira, fjallaOne, inter } from '../src/lib/fonts';
