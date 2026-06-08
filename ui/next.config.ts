@@ -10,15 +10,13 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
-  experimental: {
-    turbo: {
-      rules: {
-        '*.glsl': {
-          loaders: ['raw-loader'],
-          as: '*.js',
-        },
+  turbopack: {
+    rules: {
+      '*.glsl': {
+        loaders: ['raw-loader'],
+        as: '*.js',
       },
-    },
+    }
   },
 };
 
