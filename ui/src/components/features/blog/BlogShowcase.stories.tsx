@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs';
 
 import { BlogFilters } from '@features/blog/BlogFilters';
 import { BlogPostCard } from '@features/blog/BlogPostCard';
