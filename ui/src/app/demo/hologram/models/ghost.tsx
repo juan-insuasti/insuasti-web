@@ -1,28 +1,19 @@
 'use client';
 
-import { useState } from 'react';
-
 import { Grid, useGLTF } from '@react-three/drei';
-import { ThreeElements, useFrame } from '@react-three/fiber';
+import { ThreeElements } from '@react-three/fiber';
 import * as THREE from 'three';
-
-import holographicFragmentShader from './shaders/holographic/fragment.glsl';
-import holographicVertexShader from './shaders/holographic/vertex.glsl';
 
 export type GhostProps = ThreeElements['group'] & {
   debug?: boolean;
   useCustomShader?: boolean;
   color?: string;
+  children?: React.ReactNode;
 };
 
-export function Ghost({ debug, useCustomShader, color, ...props }: GhostProps) {
+export function Ghost({ children, debug, ...props }: GhostProps) {
   const gltf = useGLTF('/models/ghost.glb');
   const { meshes: nodes, materials } = gltf;
-  const [time, setTime] = useState(0);
-
-  useFrame((state, delta) => {
-    setTime((prev) => prev + delta);
-  });
 
   return (
     <>
@@ -53,24 +44,12 @@ export function Ghost({ debug, useCustomShader, color, ...props }: GhostProps) {
                 <mesh
                   key={key}
                   geometry={node.geometry}
-                  // material={useCustomShader ? new THREE.ShaderMaterial() : materials[materialName]}
+                  material={materials[materialName]}
                   position={[node.position.x, node.position.y - 5.8, node.position.z + 1.3]}
                   rotation={[node.rotation.x, node.rotation.y - Math.PI / 2, node.rotation.z]}
                   scale={node.scale}
                 >
-                  <shaderMaterial
-                    depthWrite={false}
-                    blending={THREE.AdditiveBlending}
-                    vertexColors={true}
-                    vertexShader={holographicVertexShader}
-                    fragmentShader={holographicFragmentShader}
-                    uniforms={{
-                      uTime: { value: time },
-                      uColor: { value: new THREE.Color(color) },
-                    }}
-                    transparent
-                    // side={THREE.DoubleSide}
-                  ></shaderMaterial>
+                  {children}
                 </mesh>
               );
             }
