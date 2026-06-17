@@ -6,17 +6,17 @@ const nextConfig: NextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.(glsl|vs|fs|vert|frag)$/,
-      use: 'raw-loader',
+      use: ['raw-loader', 'glslify-loader'],
     });
     return config;
   },
   turbopack: {
     rules: {
       '*.glsl': {
-        loaders: ['raw-loader'],
+        loaders: ['raw-loader', 'glslify-loader'],
         as: '*.js',
       },
-    }
+    },
   },
 };
 
