@@ -1,21 +1,18 @@
-'use client';
-
-import React from 'react';
-import { useSearchParams } from 'next/navigation';
-
-import { Canvas } from '@react-three/fiber';
-import { Leva } from 'leva';
+import { WebGLCanvas } from '@/components/custom/WebGLCanvas';
 
 import Scene from './scene';
 
-export default function App() {
-  const searchParams = useSearchParams();
-  const debug = searchParams.get('debug') === 'true';
+export default async function App({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const debug = (await searchParams).debug === 'true';
 
   return (
     <section className="h-screen w-full">
-      <Leva hidden={!debug} />
-      <Canvas
+      <WebGLCanvas
+        debug={debug}
         camera={{
           position: [0, 0, 5],
           fov: 45,
@@ -25,7 +22,7 @@ export default function App() {
         gl={{ antialias: true }}
       >
         <Scene debug={debug} />
-      </Canvas>
+      </WebGLCanvas>
     </section>
   );
 }
