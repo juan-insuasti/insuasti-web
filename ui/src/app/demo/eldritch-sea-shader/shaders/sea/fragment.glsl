@@ -18,7 +18,8 @@ varying vec2 vUv;
 varying float vElevation;
 varying vec3 vNormal;
 
-#pragma glslify: pointLight = require('../includes/pointLight.glsl)
+#pragma glslify: directionalLight = require('../includes/directionalLight.glsl)
+#pragma glslify: ambientLight = require('../includes/ambientLight.glsl)
 
 void main() {
   // Definitions
@@ -36,7 +37,7 @@ void main() {
     vNormal,
     vPosition.xyz,
     viewDirection,
-    200.0,
+    2000.0,
     2.0
   );
 
