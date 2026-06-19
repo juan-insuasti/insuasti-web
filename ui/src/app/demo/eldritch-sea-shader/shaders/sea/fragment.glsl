@@ -18,8 +18,7 @@ varying vec2 vUv;
 varying float vElevation;
 varying vec3 vNormal;
 
-#pragma glslify: directionalLight = require('../includes/directionalLight.glsl)
-#pragma glslify: ambientLight = require('../includes/ambientLight.glsl)
+#pragma glslify: pointLight = require('../includes/pointLight.glsl)
 
 void main() {
   // Definitions
